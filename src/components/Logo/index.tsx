@@ -1,4 +1,4 @@
-import { Logotype } from "./style"
+import { Logotype } from "./styled"
 
 const Logo = () => {
   return (
