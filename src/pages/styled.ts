@@ -14,7 +14,13 @@ export const ContainerLogin = styled.div`
 
    @media (min-width: 768px) {
     width: 700px;
+    height: 100vh;
+    display: flex;  
   }
+  
+  @media (min-width: 1024px) {
+   width: 800px;  
+}
 `
 
 export const DivMainLogin = styled.div`
@@ -22,7 +28,13 @@ export const DivMainLogin = styled.div`
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
   }
+
+  @media (min-width: 1024px) {
+   width: 800px;  
+}
 `
 
 export const DivLogo = styled.div`

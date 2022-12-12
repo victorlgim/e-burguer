@@ -15,6 +15,15 @@ export const LoginDiv = styled.form`
   @media (min-width: 425px) {
     min-height: 368px;
   }
+
+  @media (min-width: 768px) {
+    min-height: 388px;
+  }
+
+  @media (min-width: 1024px) {
+     width: 400px;
+     min-height: 396px;
+}
 `;
 
 export const ContainerForm = styled.div`
@@ -22,6 +31,10 @@ export const ContainerForm = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1024px) {
+    width: 80%;
+}
 `;
 
 export const TitleForm = styled.h2`
@@ -31,6 +44,10 @@ export const TitleForm = styled.h2`
   font-size: 18px;
   color: #333333;
   margin-top: 25px;
+
+  @media (min-width: 1024px) {
+    margin-top: 30px;
+}
 `;
 
 export const LabelForm = styled.label`
@@ -51,6 +68,10 @@ export const InputForm = styled.input`
   width: 94%;
   margin-bottom: 10px;
   padding-left: 10px;
+
+    @media (min-width: 1024px) {
+    height: 40px;
+}
 
   :focus {
     border: 2px solid #555555;

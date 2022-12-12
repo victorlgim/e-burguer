@@ -6,10 +6,10 @@ export const Logotype = styled.img`
   margin-bottom: 20px;
 
   @media (min-width: 768px) {
-    margin-top: 0px;
-  margin-bottom: 0px;
-  width: 10px;
-  height: 10px;
+    margin-top: -40px;
+  margin-bottom: 10px;
+  width: 160px;
+  height: 25px;
   }
 `;
 
@@ -22,6 +22,10 @@ export const DivLogoHeader = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+
+  @media (min-width: 768px) {
+    width: 340px;
+  }
 `;
 
 export const BackgroundImage = styled.div`
@@ -46,7 +50,7 @@ export const ParagraphLogo = styled.p`
   font-weight: 400;
   font-size: 12px;
   color: #828282;
-
+ 
 `;
 
 export const DivLogoTop = styled.div`
