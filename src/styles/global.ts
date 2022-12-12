@@ -7,5 +7,9 @@ const GlobalStyle = createGlobalStyle`
     background: #FBFBFB;
     font-family: 'Inter', sans-serif;
   }
+
+  button {
+    cursor: pointer;
+  }
 `
 export default GlobalStyle

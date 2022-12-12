@@ -2,8 +2,15 @@ import styled from "styled-components";
 
 export const Logotype = styled.img`
   width: 180px;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  margin-bottom: 0px;
+  width: 10px;
+  height: 10px;
+  }
 `;
 
 export const DivLogoHeader = styled.div`
@@ -25,7 +32,10 @@ export const BackgroundImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 7px;
+  @media (min-width: 375px) {
+    margin-left: 13px;
+  }
 `;
 
 export const ImageShop = styled.img``;
@@ -34,10 +44,15 @@ export const ParagraphLogo = styled.p`
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   color: #828282;
 
 `;
+
+export const DivLogoTop = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export const StrongLogo = styled.strong`
   color: #333333;
