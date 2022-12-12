@@ -1,17 +1,16 @@
-import Logo from '../components/Logo'
-import { DivMainLogin } from './styled'
-
-
+import Logo from "../components/Logo";
+import { ContainerLogin, DivMainLogin } from "./styled";
 
 const Login = () => {
   return (
     <>
-    <DivMainLogin>
-       <Logo />
-    </DivMainLogin>
-       
+      <ContainerLogin>
+        <DivMainLogin>
+          <Logo />
+        </DivMainLogin>
+      </ContainerLogin>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
