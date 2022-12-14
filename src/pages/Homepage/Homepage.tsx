@@ -1,6 +1,8 @@
 import React from "react";
 import Cards from "../../components/Cards";
 import Header from "../../components/Header";
+import Modal from "../../components/Modal";
+
 import { ContainerMain, UlCards } from "./styled";
 
 const Homepage = () => {
@@ -18,7 +20,9 @@ const Homepage = () => {
           <Cards />
           <Cards />
         </UlCards>
+        <Modal />
       </ContainerMain>
+      
     </>
   );
 };
