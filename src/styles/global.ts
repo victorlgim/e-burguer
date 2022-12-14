@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,10 +11,14 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+
+    :hover {
+      filter: brightness(0.9);
+    }
   }
 
   li {
     list-style: none;
   }
-`
-export default GlobalStyle
+`;
+export default GlobalStyle;

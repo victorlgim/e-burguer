@@ -13,6 +13,11 @@ export const CardBurguers = styled.li`
   border: 2px solid #e0e0e0;
   border-radius: 5px;
   margin-left: -20px;
+
+  :hover {
+    border: 2px solid #27ae60;
+    transition: 0.8s ease;
+  }
 `;
 
 export const ImgBurguer = styled.img`
@@ -61,7 +66,7 @@ export const BtnAddBurguer = styled.button`
   font-weight: 600;
   font-size: 13px;
   color: #ffffff;
-  background: #27AE60;
-  border: 2px solid #27AE60;
+  background: #27ae60;
+  border: 2px solid #27ae60;
   border-radius: 8px;
 `;

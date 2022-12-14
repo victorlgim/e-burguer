@@ -21,9 +21,9 @@ export const LoginDiv = styled.form`
   }
 
   @media (min-width: 1024px) {
-     width: 400px;
-     min-height: 396px;
-}
+    width: 400px;
+    min-height: 396px;
+  }
 `;
 
 export const ContainerForm = styled.div`
@@ -34,7 +34,7 @@ export const ContainerForm = styled.div`
 
   @media (min-width: 1024px) {
     width: 80%;
-}
+  }
 `;
 
 export const TitleForm = styled.h2`
@@ -47,7 +47,7 @@ export const TitleForm = styled.h2`
 
   @media (min-width: 1024px) {
     margin-top: 30px;
-}
+  }
 `;
 
 export const LabelForm = styled.label`
@@ -69,9 +69,9 @@ export const InputForm = styled.input`
   margin-bottom: 10px;
   padding-left: 10px;
 
-    @media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     height: 40px;
-}
+  }
 
   :focus {
     border: 2px solid #555555;

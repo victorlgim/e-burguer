@@ -10,7 +10,6 @@ export const RegisterDiv = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  
 
   @media (min-width: 425px) {
     min-height: 418px;
@@ -22,22 +21,21 @@ export const RegisterDiv = styled.form`
   }
 
   @media (min-width: 1024px) {
-     width: 420px;
-     min-height: 456px;
-}
+    width: 420px;
+    min-height: 456px;
+  }
 `;
 
 export const FlexDivRegister = styled.div`
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
-   align-items: center;
-   gap: 15px;
-   flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
   }
 
   @media (min-width: 768px) {
-   gap: 30px;
-   
+    gap: 30px;
   }
-`
+`;

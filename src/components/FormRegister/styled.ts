@@ -21,11 +21,11 @@ export const ButtonRegister = styled.button`
 `;
 
 export const DivTopRegister = styled.div`
- display: flex;
- align-items: center;
- margin-top: 16px;
- justify-content: space-between;
-`
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  justify-content: space-between;
+`;
 
 export const ButtonBack = styled(Link)`
   font-family: "Inter";
