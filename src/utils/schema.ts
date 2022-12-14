@@ -26,6 +26,6 @@ export const formSchema = yup.object().shape({
 
     passwordConfirmed: yup
       .string()
-      .required("Confirme sua senha!")
+      .required("Confirme sua senha")
       .oneOf([yup.ref("password"), null], "As senhas não coincidem")
   });

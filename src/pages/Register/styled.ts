@@ -10,6 +10,7 @@ export const RegisterDiv = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  padding-bottom: 15px;
 
   @media (min-width: 425px) {
     min-height: 418px;
@@ -22,7 +23,7 @@ export const RegisterDiv = styled.form`
 
   @media (min-width: 1024px) {
     width: 420px;
-    min-height: 456px;
+    min-height: 439px;
   }
 `;
 

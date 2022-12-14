@@ -1,10 +1,9 @@
-// import Login from "./pages/Login/Login";
-import Homepage from "./pages/Dashboard/Dashboard";
 import { GlobalProvider } from "./context/GlobalContext";
 import { UserProvider } from "./context/UserContext";
 import { PaymentsProvider } from "./context/PaymentsContext";
-// import Register from "./pages/Register/Register";
 import GlobalStyle from "./styles/global";
+import RoutesMain from "./routes/routes";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -12,8 +11,8 @@ function App() {
       <UserProvider>
         <PaymentsProvider>
           <GlobalStyle />
-          <Homepage />
-          {/* <Register /> */}
+          <RoutesMain />
+          <ToastContainer position="top-right" autoClose={1000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="colored" />
         </PaymentsProvider>
       </UserProvider>
     </GlobalProvider>

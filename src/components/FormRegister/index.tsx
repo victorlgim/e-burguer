@@ -10,18 +10,21 @@ import { api } from "../../services/api";
 import { notify, verify } from "../../utils/toast";
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
+import { useNavigate } from "react-router-dom";
 
 
 const FormRegister = () => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<iRegisterFormData>({ resolver: yupResolver(formSchema) });
-  const { loading, setLoading } = useContext(GlobalContext)
+  const { loading, setLoading } = useContext<any>(GlobalContext)
+  const navigate = useNavigate()
 
   const onSubmitFunction: SubmitHandler<iRegisterFormData> = async data => {
     try {
       setLoading(true)
       const response = await api.post("users", data);
       verify()
+      navigate('/')
       console.log(response)
     } catch (err) {    
       notify()

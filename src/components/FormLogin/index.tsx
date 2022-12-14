@@ -13,7 +13,7 @@ const FormLogin = () => {
             <InputForm type='password' placeholder='••••••••••••'/>
             <ButtonLogin>Logar</ButtonLogin>
             <SpanCreate>Crie sua conta para saborear muitas delícias e matar sua fome!</SpanCreate>
-            <BtnRegister to='/'>Cadastrar</BtnRegister>
+            <BtnRegister to='/cadastro'>Cadastrar</BtnRegister>
         </ContainerForm>
         
      </LoginDiv>
