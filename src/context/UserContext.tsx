@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-import { iDefaultUserContext } from "../@types/UserTypes/types";
+import { iDefaultUserContext } from "../@types/@UserTypes/types";
 
 export const UserContext = createContext({})
 

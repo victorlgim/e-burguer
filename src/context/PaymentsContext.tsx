@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-import { iDefaultPaymentsContext } from "../@types/PaymentsTypes/types";
+import { iDefaultPaymentsContext } from "../@types/@PaymentsTypes/types";
 
 export const PaymentsContext = createContext({})
 

@@ -43,3 +43,35 @@ export const TitleFormRegister = styled.h2`
   font-size: 18px;
   color: #333333;
 `;
+
+export const Loading = styled.img`
+  animation: loading 1.5s infinite;
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+export const MessageError = styled.span`
+  color: #ff577f;
+  font-size: 11px;
+  display: block;
+  margin: 0 auto;
+  margin-left: 14px;
+  margin-top: 4px;
+
+  @media (min-width: 375px) {
+    margin-left: 23px;
+  }
+
+  @media (min-width: 1000px) {
+    margin-left: 30px;
+    margin-bottom: -8px;
+  }
+`;

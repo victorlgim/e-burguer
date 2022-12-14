@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router-dom";
+// import AuthLogin from "../components/AuthLogin";
+// import AuthRoutes from "../components/AuthRoutes";
 // import Dashboard from "../pages/Dashboard/Dashboard";
 // import Login from "../pages/Login/Login";
 // import Register from "../pages/Register/Register";
+
 
 // const RoutesMain = () => {
 //     return (
