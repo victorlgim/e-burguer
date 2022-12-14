@@ -40,6 +40,7 @@ export const ButtonInputMax = styled.button`
     border: 2px solid #27ae60;
     border-radius: 8px;
     position: absolute;
+    z-index: 1;
     right: 138px;
     top: 26px;
     color: #fff;

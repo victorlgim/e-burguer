@@ -8,6 +8,7 @@ import { ContainerMain, UlCards } from "./styled";
 const Homepage = () => {
   return (
     <>
+    {/* <Modal /> */}
       <Header />
       <ContainerMain>
         <UlCards>
@@ -20,7 +21,7 @@ const Homepage = () => {
           <Cards />
           <Cards />
         </UlCards>
-        <Modal />
+        
       </ContainerMain>
       
     </>
