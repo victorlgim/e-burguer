@@ -1,4 +1,4 @@
-import React from 'react'
+import Input from '../Input'
 import { DivContainer, DivHeader, DivIcons, ImgCar, ImgExit, ImgHeader, ImgSearch } from './styled'
 
 
@@ -7,6 +7,7 @@ const Header = () => {
     
     <DivHeader>
      <DivContainer>
+     {/* <Input /> */}
       <ImgHeader src='./logo.png'/>
       <DivIcons>
        <ImgSearch src='./search.png' />

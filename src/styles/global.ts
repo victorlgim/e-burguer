@@ -6,10 +6,15 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: #FBFBFB;
     font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
   }
 
   button {
     cursor: pointer;
+  }
+
+  li {
+    list-style: none;
   }
 `
 export default GlobalStyle
