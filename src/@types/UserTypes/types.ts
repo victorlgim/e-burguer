@@ -1,5 +1,5 @@
 import React from 'react'
 
-export interface iDefaultGlobalContext {
+export interface iDefaultUserContext {
     children: React.ReactNode
 }  
