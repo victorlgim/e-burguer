@@ -1,15 +1,23 @@
 import React from 'react'
 import { BtnAddBurguer, CardBurguers, CategoryBurguer, ImgBurguer, PriceBurguer, TitleBurguer } from './styled'
 
-const Cards = () => {
+interface MyObjectType {
+  id: number;
+ name: string;
+ category: string;
+ price: number;
+ img: string;
+};
+
+const Cards = ({ id, name, category, price, img }: MyObjectType) => {
   return (
     
-    <CardBurguers>
-        <ImgBurguer src='lunch.png'/>
-        <TitleBurguer>Hamburguer</TitleBurguer>
-        <CategoryBurguer>Sanduíche</CategoryBurguer>
-        <PriceBurguer>R$ 14,00</PriceBurguer>
-        <BtnAddBurguer>Adicionar</BtnAddBurguer>
+    <CardBurguers id={id + ''}>
+        <ImgBurguer src={img}/>
+        <TitleBurguer>{ name }</TitleBurguer>
+        <CategoryBurguer>{ category }</CategoryBurguer>
+        <PriceBurguer>{price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</PriceBurguer>
+        <BtnAddBurguer id={id + ''}>Adicionar</BtnAddBurguer>
     </CardBurguers>
   )
 }

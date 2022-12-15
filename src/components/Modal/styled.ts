@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ModalContainer = styled.div`
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -12,9 +12,8 @@ export const ModalContainer = styled.div`
 export const ModalMenu = styled.div`
   position: relative;
   width: 290px;
-  min-height: 212px;
-  height: 320px;
-
+  
+  padding-bottom: 20px;
   border-radius: 8px;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
   animation: transition 1.4s ease;
@@ -26,7 +25,7 @@ export const ModalMenu = styled.div`
   background: #ffffff;
   border-radius: 0px 0px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-
+  height: 260px;
   z-index: 2;
 
   @media (min-width: 375px) {
@@ -57,6 +56,8 @@ export const ModalMenu = styled.div`
   }
 `;
 
+
+
 export const DivTopHeaderModal = styled.div`
   width: 100%;
   height: 54px;
@@ -83,7 +84,12 @@ export const TitleHeaderModal = styled.h3`
   color: #ffffff;
 `;
 
-export const BtnCloseModal = styled.img``;
+export const BtnCloseModal = styled.img`
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.9);
+  }
+`;
 
 export const CartEmpty = styled.h4`
   font-family: "Inter";
@@ -110,6 +116,26 @@ export const MsgEmpty = styled.span`
 export const UlCart = styled.ul`
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  max-height: 150px;
+  gap: 20px;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #27ae60;
+    border-radius: 20px;
+    border: 3px solid transparent;
+  }
+
+  @media (min-width: 1000px) {
+    max-height: 225px;
+  }
 `;
 
 export const LiCart = styled.li`
@@ -133,6 +159,7 @@ export const ImgLiCart = styled.img`
 export const ContainerCart = styled.div`
   margin: 0 auto;
   width: 90%;
+  
 `;
 
 export const DivHeaderPrimarySecond = styled.div`
@@ -236,4 +263,8 @@ export const ButtonRemoveAll = styled.button`
   font-weight: 600;
   font-size: 13px;
   color: #828282;
+
+  &:hover {
+    transition: 0.1s ease;
+  }
 `;

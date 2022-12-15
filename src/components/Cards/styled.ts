@@ -14,6 +14,12 @@ export const CardBurguers = styled.li`
   border-radius: 5px;
   margin-left: -20px;
 
+  @media (min-width: 1000px) {
+   margin-left: 20px;
+   height: 356px;
+   width: 255px;
+  }
+
   :hover {
     border: 2px solid #27ae60;
     transition: 0.8s ease;

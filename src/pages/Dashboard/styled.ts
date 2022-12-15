@@ -33,14 +33,14 @@ export const UlCards = styled.ul`
   margin-top: 20px;
 
   @media (min-width: 1000px) {
-    width: 950px;
+    width: 900px;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    gap: 55px;
+    gap: 29px;
     margin-top: 40px;
   }
 
   @media (min-width: 1200px) {
-    width: 1150px;
+
   }
 `;

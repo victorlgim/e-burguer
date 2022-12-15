@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "../../components/Cards";
 import Header from "../../components/Header";
 import Modal from "../../components/Modal";
@@ -9,11 +9,20 @@ import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { PaymentsContext } from "../../context/PaymentsContext";
 
+
+interface MyObjectType {
+  id: number;
+ name: string;
+ category: string;
+ price: number;
+ img: string;
+};
+
 const Homepage = () => {
 
   const navigate = useNavigate()
-  const token: any = localStorage.getItem('token')
-  const { list, setList } = useContext<any>(PaymentsContext)
+  const token: string = localStorage.getItem('token') as string;
+  const [ list, setList ] = useState<Array<MyObjectType>>([]) 
 
   useEffect(() => {
     const getProfile = async () => {
@@ -36,25 +45,26 @@ const Homepage = () => {
 
   return (
     <>
-    <Modal />
+    {/* <Modal /> */}
       <Header />
       <ContainerMain>
         <UlCards>
-          {/* {
 
-            list.map(lunch => (
-              <Cards id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img}/>
-            ))
 
-          } */}
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
+
+        {
+        
+        list.length > 0 && 
+        list.map(lunch => ( <Cards 
+          key={lunch.id}
+          id={lunch.id} 
+          name={lunch.name} 
+          category={lunch.category}  
+          price={lunch.price} 
+          img={lunch.img}  />
+  ))
+        }
+         
         </UlCards>
         
       </ContainerMain>
