@@ -7,11 +7,21 @@ import { iDefaultListContext } from "../@types/@PaymentsTypes/types";
 
 export const PaymentsContext = createContext({})
 
+interface MyObjectType {
+   id: number;
+  name: string;
+  category: string;
+  price: number;
+  img: string;
+};
+
 export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
 
    const navigate = useNavigate()
    const { setLoading } = useContext<any>(GlobalContext)
-   const [list, setList] = useState<[]>([])
+  
+   
+   const [list, setList] = useState<Array<MyObjectType>>([]);
      
    const exitAccount: () => void = () => {
       localStorage.removeItem("token");

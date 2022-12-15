@@ -12,7 +12,9 @@ export const ModalContainer = styled.div`
 export const ModalMenu = styled.div`
   position: relative;
   width: 290px;
-  height: 212px;
+  min-height: 212px;
+  height: 320px;
+
   border-radius: 8px;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
   animation: transition 1.4s ease;
@@ -24,6 +26,7 @@ export const ModalMenu = styled.div`
   background: #ffffff;
   border-radius: 0px 0px 5px 5px;
   border-radius: 5px 5px 5px 5px;
+
   z-index: 2;
 
   @media (min-width: 375px) {
@@ -82,7 +85,6 @@ export const TitleHeaderModal = styled.h3`
 
 export const BtnCloseModal = styled.img``;
 
-
 export const CartEmpty = styled.h4`
   font-family: "Inter";
   font-style: normal;
@@ -105,38 +107,133 @@ export const MsgEmpty = styled.span`
   margin-top: -10px;
 `;
 
-export const MainCart = styled.div`
-  
-`
+export const UlCart = styled.ul`
+  display: flex;
+  flex-direction: column;
+`;
 
-export const UlCart = styled.ul``;
+export const LiCart = styled.li`
+  margin-left: -40px;
+`;
 
-export const LiCart = styled.li``;
+export const DivHeaderCartLi = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
-export const DivImgLiCart = styled.div``;
+export const DivImgLiCart = styled.div`
+  background: #e0e0e0;
+  border-radius: 5px;
+`;
 
-export const ImgLiCart = styled.img``;
+export const ImgLiCart = styled.img`
 
-export const ContainerCart = styled.div``;
+`;
+
+export const ContainerCart = styled.div`
+  margin: 0 auto;
+  width: 90%;
+`;
+
+export const DivHeaderPrimarySecond = styled.div`
+  display: flex;
+  gap: 12px;
+`;
 
 export const DivPrimaryCart = styled.div``;
 
-export const DivSecondaryCart = styled.div``;
+export const DivSecondaryCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+export const ButtonSub = styled.button`
+  border: none;
+  width: 30.44px;
+  height: 24px;
+  background: #f2f2f2;
+`;
+
+export const ImgSub = styled.img``;
+
+export const ImgSum = styled.img``;
+
+export const SpanQtd = styled.span`
+  display: block;
+  background: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+`;
+
+export const ButtonSum = styled.button`
+  border: none;
+  width: 30.44px;
+  height: 24px;
+  background: #f2f2f2;
+`;
 
 export const DivThreeCart = styled.div``;
 
-export const TitleLiCart = styled.div``;
+export const TitleLiCart = styled.div`
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #333333;
+`;
 
-export const DivCounterCart = styled.div``;
+export const DivCounterCart = styled.div`
+  border: 2px solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  align-items: center;
+`;
 
-export const TrashCart = styled.img``;
+export const TrashCart = styled.img`
+  margin-top: 4px;
+`;
 
-export const DivBottomCart = styled.div``;
+export const DivBottomCart = styled.div`
+  border-top: 2px solid #e0e0e0;
+  margin-top: 20px;
+`;
 
-export const TopDivBottomCart = styled.div``;
+export const TopDivBottomCart = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-export const MsgTotalCartBottom = styled.h5``;
+export const MsgTotalCartBottom = styled.h5`
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333333;
+`;
 
-export const SpanTotal = styled.span``;
+export const SpanTotal = styled.span`
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #828282;
+`;
 
-export const ButtonRemoveAll = styled.button``;
+export const ButtonRemoveAll = styled.button`
+  width: 100%;
+  height: 45px;
+  background: #e0e0e0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  color: #828282;
+`;
