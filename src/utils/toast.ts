@@ -1,4 +1,3 @@
-import React from "react";
 import { toast } from "react-toastify";
 
 export const verify = () => {
@@ -26,3 +25,4 @@ export const notify = () => {
     theme: "colored",
   });
 };
+

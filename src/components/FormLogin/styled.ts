@@ -11,6 +11,7 @@ export const LoginDiv = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
+  padding-bottom: 18px;
 
   @media (min-width: 425px) {
     min-height: 368px;
@@ -22,7 +23,7 @@ export const LoginDiv = styled.form`
 
   @media (min-width: 1024px) {
     width: 400px;
-    min-height: 396px;
+    min-height: 380px;
   }
 `;
 
@@ -129,3 +130,13 @@ export const BtnRegister = styled(Link)`
     filter: brightness(0.9);
   }
 `;
+
+export const MsgError = styled.span`
+  color: #FF577F;
+  font-size: 11px;
+  display: block;
+  margin: 0 auto;
+  margin-left: 0px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+`

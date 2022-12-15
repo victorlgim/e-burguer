@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContainerMain = styled.div`
   margin: 0 auto;
+  animation: translateShow 0.4s ease;
 
   @media (min-width: 1000px) {
     width: 950px;
@@ -9,6 +10,17 @@ export const ContainerMain = styled.div`
 
   @media (min-width: 1200px) {
     width: 1150px;
+  }
+
+  @keyframes translateShow {
+    0% {
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
   }
 `;
 

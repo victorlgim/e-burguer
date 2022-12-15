@@ -29,6 +29,7 @@ const FormRegister = () => {
     } catch (err) {    
       notify()
     } finally {
+      reset({email: "", password: "", passwordConfirmed: ""})
       setLoading(false)
     }
   };

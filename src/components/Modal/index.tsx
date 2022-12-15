@@ -1,17 +1,23 @@
-import React from 'react'
-import { ModalContainer, ModalMenu } from './styled'
-
+import React from "react";
+import { BtnCloseModal, ContainerTopHeaderModal, MsgEmpty, CartEmpty, DivTopHeaderModal, DivTopModal, MainCart, ModalContainer, ModalMenu, TitleHeaderModal } from "./styled";
 
 const Modal = () => {
   return (
     <ModalContainer>
-        <ModalMenu>
-          
-        </ModalMenu>
+      <ModalMenu>
+        <DivTopHeaderModal>
+          <ContainerTopHeaderModal>
+            <DivTopModal>
+              <TitleHeaderModal>Carrinho de compras</TitleHeaderModal>
+              <BtnCloseModal src="./X.png" />
+            </DivTopModal>
+          </ContainerTopHeaderModal>
+        </DivTopHeaderModal>
+        <CartEmpty>Sua sacola está vazia</CartEmpty>
+        <MsgEmpty>Adicione itens</MsgEmpty>
+      </ModalMenu>
     </ModalContainer>
-    
-    
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

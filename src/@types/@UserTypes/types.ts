@@ -5,8 +5,13 @@ export interface iDefaultUserContext {
 }  
 
 export interface iRegisterFormData {
-    email: 'string',
-    password: 'string',
-    passwordConfirmed: 'string',
-    name: 'string'
+    email: string,
+    password: string,
+    passwordConfirmed: string,
+    name: string
+}
+
+export interface iLoginFormData {
+   email: string,
+   password: string
 }
