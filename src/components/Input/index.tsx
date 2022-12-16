@@ -1,11 +1,11 @@
-import { ButtonInput, DivInputHeader, ImgInput, InputHeader } from './styled'
+import { ButtonInput, DivInputHeader, InputHeader } from './styled'
 import { useContext } from 'react'
 import { PaymentsContext } from '../../context/PaymentsContext'
 
 const Input = () => {
     
   const { setMobile, changeResMobile, setResMobile } = useContext<any>(PaymentsContext)
-  const setResponsive = () => {
+  const setResponsive: () => void = () => {
     setMobile(false)
     setResMobile('')
   }
@@ -14,7 +14,7 @@ const Input = () => {
     
       <DivInputHeader>
          <InputHeader onChange={changeResMobile} placeholder='Digitar pesquisa...'/>
-         <ButtonInput onClick={() => setMobile(false)}>X</ButtonInput>
+         <ButtonInput onClick={setResponsive}>X</ButtonInput>
       </DivInputHeader>
     
   )

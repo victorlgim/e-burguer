@@ -21,6 +21,8 @@ export type PaymentsContextState = {
     setMobile: (mobile: boolean) => void;
     setResMobile: (resMobile: string) => void;
     changeResMobile: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    setLoading: (loading: boolean) => void;
+    exitAccount: () => void;
   };
   
  export type PaymentsContextType = {

@@ -4,7 +4,8 @@ import { iDefaultPaymentsContext } from "../@types/@PaymentsTypes/types";
 import { GlobalContext } from "./GlobalContext";
 import { useContext, useState } from "react";
 
-export const PaymentsContext = createContext({})
+
+export const PaymentsContext = createContext({});
 
 
 export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
@@ -21,14 +22,14 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
       
     };
      
-   const exitAccount: () => void = () => {
+   const exitAccount = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
 
       navigate("/"); 
       setLoading(false);
   };
-     
+      
    return (
      <PaymentsContext.Provider value={{ exitAccount, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile }}>
         { children }
