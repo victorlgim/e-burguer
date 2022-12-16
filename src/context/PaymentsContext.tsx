@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { iDefaultPaymentsContext } from "../@types/@PaymentsTypes/types";
 import { GlobalContext } from "./GlobalContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 export const PaymentsContext = createContext({})
 
@@ -11,7 +11,8 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
 
    const navigate = useNavigate()
    const { setLoading } = useContext<any>(GlobalContext)
-  
+   const [ mobile, setMobile ] = useState<boolean>(false)
+   const [ resMobile, setResMobile ] = useState<string>('')
      
    const exitAccount: () => void = () => {
       localStorage.removeItem("token");
@@ -22,7 +23,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
   };
      
    return (
-     <PaymentsContext.Provider value={{ exitAccount }}>
+     <PaymentsContext.Provider value={{ exitAccount, mobile, setMobile, resMobile, setResMobile }}>
         { children }
      </PaymentsContext.Provider>
    )

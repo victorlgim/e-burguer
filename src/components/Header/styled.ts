@@ -22,6 +22,7 @@ export const DivHeader = styled.header`
 export const DivIcons = styled.div`
   display: flex;
   gap: 13px;
+  position: relative;
 
   @media (min-width: 375px) {
     gap: 17px;
@@ -56,14 +57,56 @@ export const ImgSearch = styled.img`
   }
 `;
 
+export const DivImgCar = styled.div`
+  
+  width: 30px;
+  @media (min-width: 1000px) {
+    margin-top: 2px;
+  }
+`;
+
+export const SpanCountCar = styled.span`
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 19px;
+  margin-top: -34px;
+  margin-right: 34px;
+  right: 0;
+  background: #27ae60;
+  border-radius: 7px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    margin-right: 49px;
+  }
+
+`;
+
 export const ImgCar = styled.img`
   width: 25px;
   height: 22px;
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;
 
 export const ImgExit = styled.img`
   width: 25px;
   height: 22px;
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;

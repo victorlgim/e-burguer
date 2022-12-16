@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const DivInputHeaderMax = styled.div`
   display: none;
+  position: relative;
   @media (min-width: 768px) {
     display: flex;
     height: 40px;
@@ -19,9 +20,10 @@ export const InputHeaderMax = styled.input`
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     height: 40px;
-    width: 95%;
+    width: 100%;
     outline: none;
     padding-left: 10px;
+    
     ::placeholder {
       color: #e0e0e0;
     }
@@ -41,21 +43,22 @@ export const ButtonInputMax = styled.button`
     border-radius: 8px;
     position: absolute;
     z-index: 1;
-    right: 138px;
-    top: 26px;
+    right: 0;
+    left: -10;
+    margin-top: 6px;
     color: #fff;
     font-weight: 600;
     font-size: 14px;
-    margin-right: 15px;
+    margin-right: 9px;
   }
 
   @media (min-width: 1000px) {
-    right: 151px;
-    margin-right: 15px;
+   
+  
   }
 
   @media (min-width: 1200px) {
-    margin-right: 30px;
+  
   }
 `;
 

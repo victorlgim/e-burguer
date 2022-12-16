@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const DivInputHeader = styled.div`
   height: 50px;
   width: 100%;
+  position: relative;
+
+
 `;
 
 export const InputHeader = styled.input`
@@ -35,19 +38,14 @@ export const ButtonInput = styled.button`
   border: 2px solid #E5E1E1;
   border-radius: 8px;
   position: absolute;
-  right: 20px;
-  top: 24px;
+  margin-top: -47px;
+  right: 0;
+  margin-right: 3px;
   color: #fff;
   font-weight: 600;
   font-size: 14px;
 
-  @media (min-width: 375px) {
-    right: 26px;
-  }
 
-  @media (min-width: 425px) {
-    right: 26px;
-  }
 
   
 `;

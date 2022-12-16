@@ -34,13 +34,13 @@ const Homepage = () => {
           console.log(response.data)
        setList(response.data);
       } catch (err) {
-        // localStorage.clear()
-        // navigate('/login')
+        localStorage.clear()
+        navigate('/login')
       } 
     };
 
     getProfile();
-  }, []);
+  }, [token]);
 
 
   return (

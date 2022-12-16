@@ -31,6 +31,21 @@ export const UlCards = styled.ul`
   min-width: 270px;
   margin: 0 auto;
   margin-top: 20px;
+  
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #27ae60;
+    border-radius: 20px;
+    border: 2px solid transparent;
+  }
 
   @media (min-width: 1000px) {
     width: 900px;
