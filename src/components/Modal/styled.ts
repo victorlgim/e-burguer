@@ -23,10 +23,9 @@ export const ModalMenu = styled.div`
   top: 80px;
   transition: 0.2s ease;
   background: #ffffff;
-  border-radius: 0px 0px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  height: 260px;
-  z-index: 2;
+  min-height: 260px;
+  z-index: 99999;
 
   @media (min-width: 375px) {
     width: 330px;

@@ -8,8 +8,8 @@ import { ContainerMain, UlCards } from "./styled";
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { PaymentsContext } from "../../context/PaymentsContext";
-import { MyObjectType } from "../../@types/@GlobalTypes/types";
 import { notAuth } from "../../utils/toast";
+import { DefaultValueList } from "../../@types/@PaymentsTypes/types";
 
 
 const Homepage = () => {
@@ -20,15 +20,12 @@ const Homepage = () => {
 
   const { resMobile, empty } = useContext<any>(PaymentsContext)
 
-  const { list, setList } = useContext(PaymentsContext) as {
-    list: MyObjectType[];
-    setList: (value: MyObjectType[]) => void;
-  };
+  const { list, setList } = useContext(PaymentsContext) as DefaultValueList
 
   const filterState = list.filter(e => e.category.toLowerCase().includes(resMobile.toLowerCase().trim()) || e.name.toLowerCase().includes(resMobile.toLowerCase().trim()))
 
   useEffect(() => {
-    const getProfile = async () => {
+    const getProducts = async () => {
       try {
         const response = await api.get("products", { 
             headers: {
@@ -43,13 +40,13 @@ const Homepage = () => {
       } 
     };
 
-    getProfile();
+    getProducts();
   }, [token]);
 
 
   return (
     <>
-    {/* <Modal /> */}
+    <Modal />
       <Header />
       <ContainerMain>
         <UlCards>

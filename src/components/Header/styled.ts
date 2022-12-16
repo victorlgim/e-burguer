@@ -23,6 +23,7 @@ export const DivIcons = styled.div`
   display: flex;
   gap: 13px;
   position: relative;
+  
 
   @media (min-width: 375px) {
     gap: 17px;
@@ -51,6 +52,7 @@ export const ImgSearch = styled.img`
   width: 25px;
   height: 22px;
   display: block;
+  
   cursor: pointer;
   @media (min-width: 768px) {
     display: none;
@@ -95,7 +97,7 @@ export const ImgCar = styled.img`
   width: 25px;
   height: 22px;
   cursor: pointer;
-
+  z-index: 0;
   &:hover {
     filter: brightness(0.9);
   }

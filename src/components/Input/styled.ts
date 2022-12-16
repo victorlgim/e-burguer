@@ -44,7 +44,7 @@ export const ButtonInput = styled.button`
   color: #fff;
   font-weight: 600;
   font-size: 14px;
-
+  z-index: 0;
 
   @media (min-width: 1000px) {
     margin-top: 8px;

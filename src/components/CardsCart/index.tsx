@@ -1,36 +1,32 @@
-import React from "react";
-import {
-  ImgLiCart,
-  DivPrimaryCart,
-  DivSecondaryCart,
-  DivThreeCart,
-  TitleLiCart,
-  DivCounterCart,
-  TrashCart,
+import React, { useContext } from "react";
+import { ImgLiCart, DivPrimaryCart, DivSecondaryCart, DivThreeCart, TitleLiCart, DivCounterCart, TrashCart, LiCart, DivHeaderCartLi,  DivImgLiCart,  ButtonSub,  ButtonSum,  ImgSub, ImgSum,  SpanQtd,  DivHeaderPrimarySecond } from "./styled";
+import { PaymentsContext } from "../../context/PaymentsContext";
+import { DefaultContextCard } from "../../@types/@PaymentsTypes/types";
+import { MyObjectType } from '../../@types/@GlobalTypes/types';
 
-  LiCart,
-  DivHeaderCartLi,
-  DivImgLiCart,
-  ButtonSub,
-  ButtonSum,
-  ImgSub,
-  ImgSum,
-  SpanQtd,
-  DivHeaderPrimarySecond,
-} from "./styled";
+const CardsCart = ({ id, name, img }: MyObjectType) => {
+  
+  const { cart, setCart } = useContext(PaymentsContext) as DefaultContextCard
 
-const CardsCart = () => {
+  const removeList  = (event: React.MouseEvent<HTMLButtonElement>) => {
+    
+    const button = event.target as HTMLButtonElement;
+   
+      setCart(cart.filter((lunch: MyObjectType) => Number(button.id) !== lunch.id * 1));
+   
+    }
+
   return (
     <LiCart>
       <DivHeaderCartLi>
         <DivHeaderPrimarySecond>
           <DivPrimaryCart>
             <DivImgLiCart>
-              <ImgLiCart src="./imgcart.png" />
+              <ImgLiCart src={ img } />
             </DivImgLiCart>
           </DivPrimaryCart>
           <DivSecondaryCart>
-            <TitleLiCart>Hamburguer</TitleLiCart>
+            <TitleLiCart>{ name }</TitleLiCart>
             <DivCounterCart>
               <ButtonSub>
                 <ImgSub src="./sub.png" />
@@ -43,7 +39,7 @@ const CardsCart = () => {
           </DivSecondaryCart>
         </DivHeaderPrimarySecond>
         <DivThreeCart>
-          <TrashCart src="/trash.png" />
+          <TrashCart onClick={() => removeList } id={id + ""} src="/trash.png" />
         </DivThreeCart>
       </DivHeaderCartLi>
     </LiCart>

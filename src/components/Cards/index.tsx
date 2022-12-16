@@ -16,17 +16,22 @@ const Cards = ({ id, name, category, price, img }: MyObjectType) => {
     
     const button = event.target as HTMLButtonElement;
 
-    const data = list.find(element => element.id * 1 === Number(button.id) * 1);
+    const data = list.find((element: MyObjectType) => element.id * 1 === Number(button.id) * 1);
 
-    const verify = cart.filter(em => data.id * 1 === em.id * 1);
+    if (data) {
+      const verify = cart.filter((lunch: MyObjectType) => data.id * 1 === lunch.id * 1);
+      if (verify.length < 1) {
+        setCart([...cart, data]);
+        AddItemToast()
+      } else {
+        ErrorItemToast();
+      }
+    }
 
     
-    if (verify.length < 1) {
-      setCart([...cart, data]);
-      AddItemToast()
-    } else {
-      ErrorItemToast();
-    }
+
+
+    
   
   }
 

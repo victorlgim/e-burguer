@@ -1,39 +1,68 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PaymentsContext } from "../../context/PaymentsContext";
 import CardsCart from "../CardsCart";
-import { ContainerCart, DivBottomCart, TopDivBottomCart, BtnCloseModal, ContainerTopHeaderModal, MsgEmpty, CartEmpty, DivTopHeaderModal, DivTopModal, ModalContainer, ModalMenu, TitleHeaderModal, UlCart, MsgTotalCartBottom, SpanTotal, ButtonRemoveAll } from "./styled";
+import { ContainerCart, BtnCloseModal, ContainerTopHeaderModal, MsgEmpty, CartEmpty, DivTopHeaderModal, DivTopModal, ModalContainer, ModalMenu, TitleHeaderModal, UlCart } from "./styled";
+import { DefaultContextCard } from "../../@types/@PaymentsTypes/types";
+import { MyObjectType } from '../../@types/@GlobalTypes/types';
+import Total from "../Total";
+
 
 const Modal = () => {
+
+  const { cart, setModal } = useContext(PaymentsContext) as DefaultContextCard
+
+  
+
   return (
     <ModalContainer>
+      <div>
       <ModalMenu>
         <DivTopHeaderModal>
           <ContainerTopHeaderModal>
             <DivTopModal>
               <TitleHeaderModal>Carrinho de compras</TitleHeaderModal>
-              <BtnCloseModal src="./X.png" />
+              <BtnCloseModal onClick={() => setModal(false)} src="./X.png" />
             </DivTopModal>
           </ContainerTopHeaderModal>
         </DivTopHeaderModal>
-        {/* <CartEmpty>Sua sacola está vazia</CartEmpty>
-        <MsgEmpty>Adicione itens</MsgEmpty> */}
+        
          
         <ContainerCart>
-          <UlCart>
-           <CardsCart />
-           {/* <CardsCart />
-           <CardsCart />
-           <CardsCart />  */}
-           </UlCart>
-            <DivBottomCart>
-                <TopDivBottomCart>
-                   <MsgTotalCartBottom>Total</MsgTotalCartBottom>
-                   <SpanTotal>R$ 17,00</SpanTotal>
-                  </TopDivBottomCart>
-                  <ButtonRemoveAll>Remover todos</ButtonRemoveAll>
-              </DivBottomCart>
+          
+            
+            {
+                 
+              cart.length ?
+              (
+                <>
+                <UlCart>
+                  
+                  {
+                  cart.map((lunch: MyObjectType) => (
+                <CardsCart key={lunch.id} id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img} />
+              )
+              )
+              }
+              </UlCart>
+              <Total />
+              </>
+              )
+              :
+              (
+              <>
+               <CartEmpty>Sua sacola está vazia</CartEmpty>
+               <MsgEmpty>Adicione itens</MsgEmpty> 
+              </>
+              )
+
+            }
+           
+           
+           
          </ContainerCart>
         
       </ModalMenu>
+      </div>
     </ModalContainer>
   );
 };

@@ -68,7 +68,7 @@ export const notify = () => {
 export const ErrorItemToast = () => {
   toast.error("O item já está no carrinho!", {
     position: "top-right",
-    autoClose: 1500,
+    autoClose: 500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,

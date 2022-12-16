@@ -42,4 +42,15 @@ export type PaymentsContextState = {
     cart: MyObjectType[] | any;
     setCart: (value: MyObjectType[]) => void;
     list: MyObjectType[];
+    modal: boolean;
+    setModal: (value: boolean) => void;
+  }
+
+  export type DefaultValueList = {
+    list: MyObjectType[];
+    setList: (value: MyObjectType[]) => void;
+  }
+
+ export interface Item {
+    price: number;
   }
