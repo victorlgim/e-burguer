@@ -1,22 +1,13 @@
 import { useContext } from "react";
 import { PaymentsContext } from "../../context/PaymentsContext";
-import CustomizedBadges from "../CartUI";
+import { DefaultContextAdded } from "../../@types/@PaymentsTypes/types";
 import Input from "../Input";
 import InputMax from "../InputMax";
-import {
-  DivContainer,
-  DivHeader,
-  DivIcons,
-  ImgCar,
-  ImgExit,
-  ImgHeader,
-  ImgSearch,
-  DivImgCar,
-  SpanCountCar
-} from "./styled";
+import { DivContainer, DivHeader, DivIcons, ImgCar, ImgExit, ImgHeader, ImgSearch, DivImgCar, SpanCountCar } from "./styled";
 
 const Header = () => {
-  const { exitAccount, mobile, setMobile } = useContext<any>(PaymentsContext);
+  
+  const { exitAccount, mobile, setMobile, cart } = useContext(PaymentsContext) as DefaultContextAdded
 
   return (
     <DivHeader>
@@ -33,7 +24,7 @@ const Header = () => {
               <InputMax />
               <DivImgCar>
               <ImgCar src="./car.png" />
-              <SpanCountCar>0</SpanCountCar>
+              <SpanCountCar>{cart.length}</SpanCountCar>
               </DivImgCar>
               <ImgExit onClick={exitAccount} src="./exit.png" />
             </DivIcons>

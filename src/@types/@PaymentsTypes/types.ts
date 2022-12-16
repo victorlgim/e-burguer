@@ -1,4 +1,5 @@
 import React from 'react'
+import { MyObjectType } from '../@GlobalTypes/types';
 
 export interface iDefaultPaymentsContext {
     children: React.ReactNode;
@@ -29,3 +30,16 @@ export type PaymentsContextState = {
     state: PaymentsContextState;
     actions: PaymentsContextActions;
   };
+
+ export type DefaultContextAdded = {
+    exitAccount: () => void;
+    mobile: boolean;
+    setMobile: (value: boolean) => void;
+    cart: MyObjectType[];
+  };
+
+  export type DefaultContextCard = {
+    cart: MyObjectType[] | any;
+    setCart: (value: MyObjectType[]) => void;
+    list: MyObjectType[];
+  }

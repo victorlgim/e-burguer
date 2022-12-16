@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { GlobalContext } from '../../context/GlobalContext';
 import { useContext, useState } from 'react';
 import { Loading } from '../FormRegister/styled';
+import { sucessLogin } from '../../utils/toast';
 
 const FormLogin = () => {
 
@@ -23,6 +24,7 @@ const FormLogin = () => {
 
        console.log(response)
         setLogin(true)
+        sucessLogin()
         window.localStorage.setItem("token", JSON.stringify(response.data.accessToken));
         window.localStorage.setItem("user", JSON.stringify(response.data.user));
         

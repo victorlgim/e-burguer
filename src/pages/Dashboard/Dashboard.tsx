@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Cards from "../../components/Cards";
 import Header from "../../components/Header";
 import Modal from "../../components/Modal";
@@ -8,22 +8,23 @@ import { ContainerMain, UlCards } from "./styled";
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { PaymentsContext } from "../../context/PaymentsContext";
+import { MyObjectType } from "../../@types/@GlobalTypes/types";
+import { notAuth } from "../../utils/toast";
 
-
-interface MyObjectType {
-  id: number;
- name: string;
- category: string;
- price: number;
- img: string;
-};
 
 const Homepage = () => {
 
   const navigate = useNavigate()
-  const token: string = localStorage.getItem('token') as string;
+
+  const token = localStorage.getItem('token') as string;
+
   const { resMobile, empty } = useContext<any>(PaymentsContext)
-  const [ list, setList ] = useState<Array<MyObjectType>>([]) 
+
+  const { list, setList } = useContext(PaymentsContext) as {
+    list: MyObjectType[];
+    setList: (value: MyObjectType[]) => void;
+  };
+
   const filterState = list.filter(e => e.category.toLowerCase().includes(resMobile.toLowerCase().trim()) || e.name.toLowerCase().includes(resMobile.toLowerCase().trim()))
 
   useEffect(() => {
@@ -38,6 +39,7 @@ const Homepage = () => {
       } catch (err) {
         localStorage.clear()
         navigate('/login')
+        notAuth()
       } 
     };
 

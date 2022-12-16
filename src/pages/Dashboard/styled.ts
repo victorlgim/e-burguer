@@ -31,6 +31,7 @@ export const UlCards = styled.ul`
   min-width: 270px;
   margin: 0 auto;
   margin-top: 20px;
+  animation: translateShow 0.4s ease;
   
   ::-webkit-scrollbar {
     width: 2px;
@@ -55,7 +56,14 @@ export const UlCards = styled.ul`
     margin-top: 40px;
   }
 
-  @media (min-width: 1200px) {
-
+  @keyframes translateShow {
+    0% {
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
   }
 `;

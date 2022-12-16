@@ -4,6 +4,8 @@ import { iDefaultPaymentsContext, iDefaultListContext } from "../@types/@Payment
 import { GlobalContext } from "./GlobalContext";
 import { useContext, useState } from "react";
 import { GlobalContextType } from "../@types/@GlobalTypes/types";
+import { MyObjectType } from "../@types/@GlobalTypes/types";
+import { sucessLogout } from "../utils/toast";
 
 export const PaymentsContext = createContext({});
 
@@ -12,6 +14,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
 
    const navigate = useNavigate()
    const { setLoading } = useContext(GlobalContext) as GlobalContextType
+   const [ list, setList ] = useState<Array<MyObjectType>>([]) 
    const [ cart, setCart ] = useState<Array<iDefaultListContext>>([])
    const [ mobile, setMobile ] = useState<boolean>(false)
    const [ resMobile, setResMobile ] = useState<string>('')
@@ -30,10 +33,11 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
 
       navigate("/"); 
       setLoading(false);
+      sucessLogout()
   };
       
    return (
-     <PaymentsContext.Provider value={{ exitAccount, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile, cart, setCart }}>
+     <PaymentsContext.Provider value={{ exitAccount, list, setList, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile, cart, setCart }}>
         { children }
      </PaymentsContext.Provider>
    )

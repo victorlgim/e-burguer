@@ -13,11 +13,33 @@ export const CardBurguers = styled.li`
   border: 2px solid #e0e0e0;
   border-radius: 5px;
   margin-left: -20px;
+  animation: smoothShow 900ms;
+  animation: translateShow 1.4s ease;
 
   @media (min-width: 1000px) {
-   margin-left: 20px;
-   height: 356px;
-   width: 255px;
+    margin-left: 20px;
+    height: 356px;
+    width: 255px;
+  }
+
+  @keyframes smoothShow {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes translateShow {
+    0% {
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
   }
 
   :hover {

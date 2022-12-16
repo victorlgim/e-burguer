@@ -1,23 +1,45 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PaymentsContext } from '../../context/PaymentsContext';
 import { BtnAddBurguer, CardBurguers, CategoryBurguer, ImgBurguer, PriceBurguer, TitleBurguer } from './styled'
+import { MyObjectType } from '../../@types/@GlobalTypes/types';
+import { DefaultContextCard } from '../../@types/@PaymentsTypes/types';
+import { AddItemToast, ErrorItemToast } from '../../utils/toast';
 
-interface MyObjectType {
-  id: number;
- name: string;
- category: string;
- price: number;
- img: string;
-};
+
 
 const Cards = ({ id, name, category, price, img }: MyObjectType) => {
+   
+  const { cart, setCart, list } = useContext(PaymentsContext) as DefaultContextCard
+   
+
+  const selectItems = (event: React.MouseEvent<HTMLButtonElement>) => {
+    
+    const button = event.target as HTMLButtonElement;
+
+    const data = list.find(element => element.id * 1 === Number(button.id) * 1);
+
+    const verify = cart.filter(em => data.id * 1 === em.id * 1);
+
+    
+    if (verify.length < 1) {
+      setCart([...cart, data]);
+      AddItemToast()
+    } else {
+      ErrorItemToast();
+    }
+  
+  }
+
   return (
     
-    <CardBurguers id={id + ''}>
-        <ImgBurguer src={img}/>
+    <CardBurguers id={ id + '' }>
+
+        <ImgBurguer src={ img }/>
         <TitleBurguer>{ name }</TitleBurguer>
         <CategoryBurguer>{ category }</CategoryBurguer>
-        <PriceBurguer>{price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</PriceBurguer>
-        <BtnAddBurguer id={id + ''}>Adicionar</BtnAddBurguer>
+        <PriceBurguer>{ price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }</PriceBurguer>
+        <BtnAddBurguer onClick={ selectItems } id={ id + '' }>Adicionar</BtnAddBurguer>
+
     </CardBurguers>
   )
 }

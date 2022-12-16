@@ -9,3 +9,11 @@ export type GlobalContextType = {
     setLoading: (loading: boolean) => void;
 
 };
+
+export interface MyObjectType {
+    id: number;
+   name: string;
+   category: string;
+   price: number;
+   img: string;
+  };
