@@ -17,8 +17,8 @@ export const DivImgLiCart = styled.div`
 `;
 
 export const ImgLiCart = styled.img`
-   width: 100%;
-   height: 100%;
+  width: 100%;
+  height: 100%;
 `;
 
 export const ContainerCart = styled.div`
@@ -75,6 +75,7 @@ export const TitleLiCart = styled.div`
   font-weight: 700;
   font-size: 14px;
   color: #333333;
+  margin-top: 4px;
 `;
 
 export const DivCounterCart = styled.div`
@@ -136,5 +137,14 @@ export const ButtonRemoveAll = styled.button`
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
+  color: #828282;
+`;
+
+export const CategorieCart = styled.span`
+  display: block;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
   color: #828282;
 `;

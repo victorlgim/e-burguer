@@ -7,12 +7,12 @@ export const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 `;
 
 export const ModalMenu = styled.div`
   position: relative;
   width: 290px;
-  
   padding-bottom: 20px;
   border-radius: 8px;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
@@ -25,7 +25,7 @@ export const ModalMenu = styled.div`
   background: #ffffff;
   border-radius: 5px 5px 5px 5px;
   min-height: 260px;
-  z-index: 99999;
+  z-index: 1000;
 
   @media (min-width: 375px) {
     width: 330px;
@@ -54,8 +54,6 @@ export const ModalMenu = styled.div`
     }
   }
 `;
-
-
 
 export const DivTopHeaderModal = styled.div`
   width: 100%;
@@ -151,14 +149,11 @@ export const DivImgLiCart = styled.div`
   border-radius: 5px;
 `;
 
-export const ImgLiCart = styled.img`
-
-`;
+export const ImgLiCart = styled.img``;
 
 export const ContainerCart = styled.div`
   margin: 0 auto;
   width: 90%;
-  
 `;
 
 export const DivHeaderPrimarySecond = styled.div`

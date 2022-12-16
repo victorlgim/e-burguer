@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Cards from "../../components/Cards";
 import Header from "../../components/Header";
 import Modal from "../../components/Modal";
@@ -46,6 +45,7 @@ const Homepage = () => {
 
   return (
     <>
+    
     {modal && <Modal />}
     
       <Header />
@@ -55,10 +55,19 @@ const Homepage = () => {
 
 
         {
+
         filterState.length && !empty ?
      
         list.map(lunch => ( 
-        <Cards key={lunch.id} id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img}  />
+        <Cards 
+        key={lunch.id} 
+        id={lunch.id} 
+        name={lunch.name} 
+        category={lunch.category} 
+        price={lunch.price} 
+        img={lunch.img}  
+
+        />
         )
         )
 
@@ -67,7 +76,15 @@ const Homepage = () => {
         filterState.length && empty ? 
 
         filterState.map(lunch => ( 
-          <Cards key={lunch.id} id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img}  />
+          <Cards 
+          key={lunch.id} 
+          id={lunch.id} 
+          name={lunch.name} 
+          category={lunch.category} 
+          price={lunch.price} 
+          img={lunch.img} 
+
+          />
           )
           )
 

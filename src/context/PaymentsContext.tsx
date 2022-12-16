@@ -20,6 +20,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
    const [ resMobile, setResMobile ] = useState<string>('')
    const [ empty, setEmpty ] = useState<boolean>(true)
    const [ modal, setModal ] = useState<boolean>(false)
+   const [ counter, setCounter ] = useState<number>(1)
    
 
    const changeResMobile = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +40,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
   };
       
    return (
-     <PaymentsContext.Provider value={{ exitAccount, modal, setModal, list, setList, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile, cart, setCart }}>
+     <PaymentsContext.Provider value={{ exitAccount, modal, setCounter, counter, setModal, list, setList, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile, cart, setCart }}>
         { children }
      </PaymentsContext.Provider>
    )
