@@ -22,7 +22,9 @@ const Homepage = () => {
 
   const navigate = useNavigate()
   const token: string = localStorage.getItem('token') as string;
+  const { resMobile, empty } = useContext<any>(PaymentsContext)
   const [ list, setList ] = useState<Array<MyObjectType>>([]) 
+  const filterState = list.filter(e => e.category.toLowerCase().includes(resMobile.toLowerCase().trim()) || e.name.toLowerCase().includes(resMobile.toLowerCase().trim()))
 
   useEffect(() => {
     const getProfile = async () => {
@@ -53,16 +55,25 @@ const Homepage = () => {
 
 
         {
+        filterState.length && !empty ?
+     
+        list.map(lunch => ( 
+        <Cards key={lunch.id} id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img}  />
+        )
+        )
+
+        :  
         
-        list.length > 0 && 
-        list.map(lunch => ( <Cards 
-          key={lunch.id}
-          id={lunch.id} 
-          name={lunch.name} 
-          category={lunch.category}  
-          price={lunch.price} 
-          img={lunch.img}  />
-  ))
+        filterState.length && empty ? 
+
+        filterState.map(lunch => ( 
+          <Cards key={lunch.id} id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img}  />
+          )
+          )
+
+          :
+
+          <></>
         }
          
         </UlCards>

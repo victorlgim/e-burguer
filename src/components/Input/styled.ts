@@ -46,7 +46,10 @@ export const ButtonInput = styled.button`
   font-size: 14px;
 
 
-
+  @media (min-width: 1000px) {
+    margin-top: 8px;
+    margin-right: 14px;
+  }
   
 `;
 

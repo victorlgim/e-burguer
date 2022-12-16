@@ -5,6 +5,9 @@ import { PaymentsContext } from '../../context/PaymentsContext'
 const Input = () => {
     
   const { setMobile, changeResMobile, setResMobile } = useContext<any>(PaymentsContext)
+
+   
+
   const setResponsive: () => void = () => {
     setMobile(false)
     setResMobile('')
