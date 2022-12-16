@@ -4,13 +4,16 @@ import { PaymentsContext } from '../../context/PaymentsContext'
 
 const Input = () => {
     
-  const { setMobile } = useContext<any>(PaymentsContext)
-  
+  const { setMobile, changeResMobile, setResMobile } = useContext<any>(PaymentsContext)
+  const setResponsive = () => {
+    setMobile(false)
+    setResMobile('')
+  }
 
   return (
     
       <DivInputHeader>
-         <InputHeader placeholder='Digitar pesquisa...'/>
+         <InputHeader onChange={changeResMobile} placeholder='Digitar pesquisa...'/>
          <ButtonInput onClick={() => setMobile(false)}>X</ButtonInput>
       </DivInputHeader>
     

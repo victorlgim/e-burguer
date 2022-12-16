@@ -18,6 +18,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
    const changeResMobile = (event: React.ChangeEvent<HTMLInputElement>) => {
       setResMobile(event.target.value);
       resMobile.length === 0 ? setEmpty(false) : setEmpty(true);
+      
     };
      
    const exitAccount: () => void = () => {

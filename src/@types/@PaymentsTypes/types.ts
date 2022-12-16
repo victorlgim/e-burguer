@@ -11,3 +11,19 @@ export interface iDefaultListContext {
     price: number;
     img: string;
 }
+
+export type PaymentsContextState = {
+    mobile: boolean;
+    resMobile: string;
+  };
+  
+ export type PaymentsContextActions = {
+    setMobile: (mobile: boolean) => void;
+    setResMobile: (resMobile: string) => void;
+    changeResMobile: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  };
+  
+ export type PaymentsContextType = {
+    state: PaymentsContextState;
+    actions: PaymentsContextActions;
+  };
