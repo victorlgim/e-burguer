@@ -12,10 +12,13 @@ export const DivHeaderCartLi = styled.div`
 export const DivImgLiCart = styled.div`
   background: #e0e0e0;
   border-radius: 5px;
+  width: 65px;
+  height: 55px;
 `;
 
 export const ImgLiCart = styled.img`
-
+   width: 100%;
+   height: 100%;
 `;
 
 export const ContainerCart = styled.div`

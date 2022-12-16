@@ -97,7 +97,7 @@ export const CartEmpty = styled.h4`
   font-size: 17px;
   text-align: center;
   color: #333333;
-  margin-top: 40px;
+  margin-top: 70px;
 `;
 
 export const MsgEmpty = styled.span`

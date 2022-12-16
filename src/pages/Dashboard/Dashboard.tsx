@@ -18,7 +18,7 @@ const Homepage = () => {
 
   const token = localStorage.getItem('token') as string;
 
-  const { resMobile, empty } = useContext<any>(PaymentsContext)
+  const { resMobile, empty, modal } = useContext<any>(PaymentsContext)
 
   const { list, setList } = useContext(PaymentsContext) as DefaultValueList
 
@@ -46,7 +46,8 @@ const Homepage = () => {
 
   return (
     <>
-    <Modal />
+    {modal && <Modal />}
+    
       <Header />
       <ContainerMain>
         <UlCards>

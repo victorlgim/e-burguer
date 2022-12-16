@@ -7,7 +7,7 @@ import { DivContainer, DivHeader, DivIcons, ImgCar, ImgExit, ImgHeader, ImgSearc
 
 const Header = () => {
   
-  const { exitAccount, mobile, setMobile, cart } = useContext(PaymentsContext) as DefaultContextAdded
+  const { exitAccount, mobile, setMobile, cart, setModal } = useContext(PaymentsContext) as DefaultContextAdded
 
   return (
     <DivHeader>
@@ -20,11 +20,11 @@ const Header = () => {
           <>
             <ImgHeader src="./logo.png" />
             <DivIcons>
-              <ImgSearch onClick={() => setMobile(true)} src="./search.png" />
+              <ImgSearch onClick={ () => setMobile(true) } src="./search.png" />
               <InputMax />
               <DivImgCar>
-              <ImgCar src="./car.png" />
-              <SpanCountCar>{cart.length}</SpanCountCar>
+              <ImgCar onClick={ () => setModal(true) } src="./car.png" />
+              <SpanCountCar onClick={ () => setModal(true) }>{cart.length}</SpanCountCar>
               </DivImgCar>
               <ImgExit onClick={exitAccount} src="./exit.png" />
             </DivIcons>

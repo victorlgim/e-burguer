@@ -19,7 +19,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
    const [ mobile, setMobile ] = useState<boolean>(false)
    const [ resMobile, setResMobile ] = useState<string>('')
    const [ empty, setEmpty ] = useState<boolean>(true)
-   const [ modal, setModal ] = useState<boolean>(true)
+   const [ modal, setModal ] = useState<boolean>(false)
    
 
    const changeResMobile = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -36,6 +36,7 @@ export type PaymentsContextState = {
     mobile: boolean;
     setMobile: (value: boolean) => void;
     cart: MyObjectType[];
+    setModal: (value: boolean) => void;
   };
 
   export type DefaultContextCard = {
