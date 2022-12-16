@@ -13,6 +13,12 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
    const { setLoading } = useContext<any>(GlobalContext)
    const [ mobile, setMobile ] = useState<boolean>(false)
    const [ resMobile, setResMobile ] = useState<string>('')
+   const [ empty, setEmpty ] = useState<boolean>(true)
+
+   const changeResMobile = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setResMobile(event.target.value);
+      resMobile.length === 0 ? setEmpty(false) : setEmpty(true);
+    };
      
    const exitAccount: () => void = () => {
       localStorage.removeItem("token");
@@ -23,7 +29,7 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
   };
      
    return (
-     <PaymentsContext.Provider value={{ exitAccount, mobile, setMobile, resMobile, setResMobile }}>
+     <PaymentsContext.Provider value={{ exitAccount, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile }}>
         { children }
      </PaymentsContext.Provider>
    )
