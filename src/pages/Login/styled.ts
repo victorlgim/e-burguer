@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
+
+
 export const Container = styled.div`
   width: 300px;
   margin: 0 auto;
   animation: translateShow 0.4s ease;
+  height: 100vh;
+  margin-bottom: 5px;
+
 
   @media (min-width: 375px) {
     width: 340px;
@@ -37,10 +42,14 @@ export const Container = styled.div`
 
 export const DivMainLogin = styled.div`
   display: block;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    margin-top: 0px;
     gap: 30px;
   }
 

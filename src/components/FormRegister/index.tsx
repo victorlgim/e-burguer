@@ -25,7 +25,7 @@ const FormRegister = () => {
     try {
 
       setLoading(true);
-      const response = await api.post("users", data);
+      await api.post("users", data);
       verify();
       navigate("/");     
     } 
@@ -51,19 +51,19 @@ const FormRegister = () => {
         </DivTopRegister>
 
         <LabelForm>Nome</LabelForm>
-        <InputForm placeholder="Digite o seu nome..." {...register("name")}/>
+        <InputForm style={{border: `${errors.name ? '2px solid #E60000' : '2px solid #ccc'}`}} placeholder="Digite o seu nome..." {...register("name")}/>
         {errors.name && <MessageError>{errors.name.message}</MessageError>}
 
         <LabelForm>Email</LabelForm>
-        <InputForm placeholder="Digite o seu email..." {...register("email")}/>
+        <InputForm style={{border: `${errors.email ? '2px solid #E60000' : '2px solid #ccc'}`}} placeholder="Digite o seu email..." {...register("email")}/>
         {errors.email && ( <MessageError>{errors.email.message}</MessageError> )}
 
         <LabelForm>Senha</LabelForm>
-        <InputForm type='password' placeholder="••••••••••••" {...register("password")}/>
+        <InputForm style={{border: `${errors.password ? '2px solid #E60000' : '2px solid #ccc'}`}} type='password' placeholder="••••••••••••" {...register("password")}/>
         {errors.password && ( <MessageError>{errors.password.message}</MessageError> )}
 
         <LabelForm>Confirmar senha</LabelForm>
-        <InputForm type="password" placeholder="••••••••••••" {...register("passwordConfirmed")} />
+        <InputForm style={{border: `${errors.passwordConfirmed ? '2px solid #E60000' : '2px solid #ccc'}`}} type="password" placeholder="••••••••••••" {...register("passwordConfirmed")} />
         {errors.passwordConfirmed && (<MessageError>{errors.passwordConfirmed.message}</MessageError>)}
 
         <ButtonRegister type='submit'>{loading ? <Loading src="/spinner.png" /> : "Cadastrar"}</ButtonRegister>

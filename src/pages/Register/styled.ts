@@ -19,6 +19,7 @@ export const RegisterDiv = styled.form`
   @media (min-width: 768px) {
     min-height: 460px;
     width: 350px;
+    margin-top: 15px;
   }
 
   @media (min-width: 1024px) {
@@ -30,6 +31,8 @@ export const RegisterDiv = styled.form`
 export const FlexDivRegister = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
+
   @media (min-width: 768px) {
     align-items: center;
     gap: 15px;
@@ -38,5 +41,6 @@ export const FlexDivRegister = styled.div`
 
   @media (min-width: 768px) {
     gap: 30px;
+    margin-top: 0px;
   }
 `;

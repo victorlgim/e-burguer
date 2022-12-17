@@ -10,8 +10,11 @@ export const LoginDiv = styled.form`
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding-bottom: 18px;
+  justify-content: center;
+  align-items: center;
+  
 
   @media (min-width: 425px) {
     min-height: 368px;
@@ -53,12 +56,23 @@ export const TitleForm = styled.h2`
 `;
 
 export const LabelForm = styled.label`
-  font-family: "Inter";
+font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: #999999;
+  margin-bottom: 4px;
+
+  @media (min-width: 768px) {
+    font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   color: #999999;
   margin-bottom: 4px;
+
+  }
+ 
 `;
 
 export const InputForm = styled.input`
@@ -66,7 +80,7 @@ export const InputForm = styled.input`
   border: 2px solid #d6d6d6;
   border-radius: 8px;
   outline: none;
-  height: 45px;
+  height: 50px;
   width: 100%;
   margin-bottom: 10px;
   padding-left: 10px;
