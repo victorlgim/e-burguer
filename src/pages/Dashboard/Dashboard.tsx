@@ -30,7 +30,7 @@ const Homepage = ({ changeTheme, theme, setTheme }: any) => {
             headers: {
             Authorization: `Bearer ${JSON.parse(token)}`,
           },});
-          console.log(response.data)
+  
        setList(response.data);
       } catch (err) {
         localStorage.clear()
