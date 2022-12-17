@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const LoginDiv = styled.form`
-  min-height: 380px;
+  min-height: 390px;
   background: #ffffff;
   border: 2px solid #f5f5f5;
   box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.25);
@@ -10,7 +10,7 @@ export const LoginDiv = styled.form`
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding-bottom: 18px;
 
   @media (min-width: 425px) {
@@ -45,6 +45,7 @@ export const TitleForm = styled.h2`
   font-size: 18px;
   color: #333333;
   margin-top: 25px;
+  margin-bottom: 20px;
 
   @media (min-width: 1024px) {
     margin-top: 30px;
@@ -65,13 +66,13 @@ export const InputForm = styled.input`
   border: 2px solid #d6d6d6;
   border-radius: 8px;
   outline: none;
-  height: 35px;
-  width: 94%;
+  height: 45px;
+  width: 100%;
   margin-bottom: 10px;
   padding-left: 10px;
 
   @media (min-width: 1024px) {
-    height: 40px;
+    height: 45px;
   }
 
   :focus {
@@ -113,7 +114,7 @@ export const SpanCreate = styled.span`
 
 export const BtnRegister = styled(Link)`
   width: 100%;
-  height: 30px;
+  height: 46px;
   background: #f5f5f5;
   border-radius: 8px;
   font-family: "Inter";

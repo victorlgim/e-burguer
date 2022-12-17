@@ -9,10 +9,9 @@ export const MoldImgBurguer = styled.div`
 export const CardBurguers = styled.li`
   min-width: 250px;
   height: 356px;
-  background: #ffffff;
-  border: 2px solid #e0e0e0;
+  background: ${props => props.theme.colors.card};
+  border: 2px solid ${props => props.theme.colors.bdcard};
   border-radius: 5px;
-  margin-left: -20px;
   animation: smoothShow 900ms;
   animation: translateShow 1.4s ease;
 
@@ -43,7 +42,7 @@ export const CardBurguers = styled.li`
   }
 
   :hover {
-    border: 2px solid #27ae60;
+    border: 2px solid ${props => props.theme.colors.primary};
     transition: 0.8s ease;
   }
 `;
@@ -52,6 +51,7 @@ export const ImgBurguer = styled.img`
   width: 100%;
   height: 180px;
   background: #f5f5f5;
+  opacity: ${props => props.theme.colors.opacity};
 `;
 
 export const TitleBurguer = styled.h3`
@@ -59,8 +59,10 @@ export const TitleBurguer = styled.h3`
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  color: #333333;
+  color: ${props => props.theme.colors.text};
   margin-left: 12px;
+  margin-top: 20px;
+  margin-bottom: 13px;
 `;
 
 export const CategoryBurguer = styled.small`
@@ -71,7 +73,7 @@ export const CategoryBurguer = styled.small`
   font-size: 12px;
   color: #828282;
   margin-left: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 `;
 
 export const PriceBurguer = styled.span`
@@ -81,7 +83,7 @@ export const PriceBurguer = styled.span`
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #27ae60;
+  color: ${props => props.theme.colors.primary};
   margin-bottom: 17px;
 `;
 
@@ -94,7 +96,7 @@ export const BtnAddBurguer = styled.button`
   font-weight: 600;
   font-size: 13px;
   color: #ffffff;
-  background: #27ae60;
-  border: 2px solid #27ae60;
+  background: ${props => props.theme.colors.primary};
+  border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
 `;

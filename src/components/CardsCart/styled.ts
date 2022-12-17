@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LiCart = styled.li`
-  margin-left: -40px;
+ 
 `;
 
 export const DivHeaderCartLi = styled.div`
@@ -74,7 +74,7 @@ export const TitleLiCart = styled.div`
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  color: #333333;
+  color: ${props => props.theme.colors.text};
   margin-top: 4px;
 `;
 
@@ -116,7 +116,7 @@ export const MsgTotalCartBottom = styled.h5`
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #333333;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const SpanTotal = styled.span`
@@ -124,7 +124,7 @@ export const SpanTotal = styled.span`
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #828282;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const ButtonRemoveAll = styled.button`

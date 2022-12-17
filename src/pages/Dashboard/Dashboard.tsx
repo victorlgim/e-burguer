@@ -11,7 +11,7 @@ import { notAuth } from "../../utils/toast";
 import { DefaultValueList } from "../../@types/@PaymentsTypes/types";
 
 
-const Homepage = () => {
+const Homepage = ({ changeTheme, theme }: any) => {
 
   const navigate = useNavigate()
 
@@ -48,7 +48,7 @@ const Homepage = () => {
     
     {modal && <Modal />}
     
-      <Header />
+      <Header changeTheme={ changeTheme } theme={ theme }/>
       <ContainerMain>
         <UlCards>
 

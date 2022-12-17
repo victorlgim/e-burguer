@@ -3,6 +3,7 @@ import { MyObjectType } from '../@GlobalTypes/types';
 
 export interface iDefaultPaymentsContext {
     children: React.ReactNode;
+    changeTheme: () => void;
 }  
 
 export interface iDefaultListContext {

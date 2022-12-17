@@ -17,3 +17,16 @@ export interface MyObjectType {
    price: number;
    img: string;
   };
+
+  export interface iDefaultTheme {
+
+    title: string,
+
+    colors: {
+        primary: string,
+        secundary: string,
+
+        background: string,
+        text: string
+    },
+    }

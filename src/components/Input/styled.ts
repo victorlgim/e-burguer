@@ -34,12 +34,13 @@ export const InputHeader = styled.input`
 export const ButtonInput = styled.button`
   width: 49px;
   height: 40px;
-  background: #E0E0E0;
-  border: 2px solid #E5E1E1;
+  background: ${props => props.theme.colors.primary};
+  opacity: 0.8;
+  border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
   position: absolute;
-  margin-top: -47px;
-  right: 0;
+  margin-top: 5px;
+  right: 15px;;
   margin-right: 3px;
   color: #fff;
   font-weight: 600;

@@ -10,7 +10,7 @@ import { sucessLogout } from "../utils/toast";
 export const PaymentsContext = createContext({});
 
 
-export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
+export const PaymentsProvider = ({ children, changeTheme }: iDefaultPaymentsContext) => {
 
    const navigate = useNavigate()
    const { setLoading } = useContext(GlobalContext) as GlobalContextType
@@ -22,18 +22,15 @@ export const PaymentsProvider = ({ children }: iDefaultPaymentsContext) => {
    const [ modal, setModal ] = useState<boolean>(false)
    const [ counter, setCounter ] = useState<number>(1)
    
-
    const changeResMobile = (event: React.ChangeEvent<HTMLInputElement>) => {
       setResMobile(event.target.value);
       resMobile.length === 0 ? setEmpty(false) : setEmpty(true);
     }
-
-    
      
    const exitAccount = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
-
+      changeTheme()
       navigate("/"); 
       setLoading(false);
       sucessLogout()

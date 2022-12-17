@@ -18,14 +18,15 @@ export const ModalMenu = styled.div`
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
   animation: transition 1.4s ease;
   background: #212529;
-  box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3.20867px 32.0867px -8.02168px ${props => props.theme.colors.three};
   border-radius: 3.20867px;
   top: 80px;
   transition: 0.2s ease;
-  background: #ffffff;
+  background: ${props => props.theme.colors.card};
   border-radius: 5px 5px 5px 5px;
   min-height: 260px;
   z-index: 1000;
+ 
 
   @media (min-width: 375px) {
     width: 330px;
@@ -58,8 +59,11 @@ export const ModalMenu = styled.div`
 export const DivTopHeaderModal = styled.div`
   width: 100%;
   height: 54px;
-  background: #27ae60;
+  background: ${props => props.theme.colors.primary};
   border-radius: 5px 5px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const DivTopModal = styled.div`
@@ -92,10 +96,11 @@ export const CartEmpty = styled.h4`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
-  color: #333333;
+  color: ${props => props.theme.colors.text};
   margin-top: 70px;
+  margin-bottom: 10px;
 `;
 
 export const MsgEmpty = styled.span`
@@ -113,9 +118,15 @@ export const MsgEmpty = styled.span`
 export const UlCart = styled.ul`
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  max-height: 150px;
+  margin-top: 15px;
+  min-height: 60px;
+  height: 100%;
+  padding-bottom: 4px;
+  max-height: 215px;
+  margin-bottom: 4px;
+  /* background-color: red; */
   gap: 20px;
+  overflow-y: auto;
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -125,14 +136,15 @@ export const UlCart = styled.ul`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #27ae60;
+    background-color: ${props => props.theme.colors.primary};
     border-radius: 20px;
     border: 3px solid transparent;
   }
 
-  @media (min-width: 1000px) {
-    max-height: 225px;
-  }
+  /* @media (min-width: 1000px) {
+  
+    max-height: 345px;
+  } */
 `;
 
 export const LiCart = styled.li`
@@ -204,7 +216,7 @@ export const TitleLiCart = styled.div`
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  color: #333333;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const DivCounterCart = styled.div`
@@ -221,13 +233,16 @@ export const TrashCart = styled.img`
 
 export const DivBottomCart = styled.div`
   border-top: 2px solid #e0e0e0;
-  margin-top: 20px;
+ margin-top: 10px;
 `;
 
 export const TopDivBottomCart = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 `;
 
 export const MsgTotalCartBottom = styled.h5`
@@ -235,7 +250,7 @@ export const MsgTotalCartBottom = styled.h5`
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #333333;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const SpanTotal = styled.span`
@@ -243,20 +258,20 @@ export const SpanTotal = styled.span`
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #828282;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const ButtonRemoveAll = styled.button`
   width: 100%;
   height: 45px;
-  background: #e0e0e0;
-  border: 2px solid #e0e0e0;
+  background: ${props => props.theme.colors.button};
+  border: none;
   border-radius: 8px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
-  color: #828282;
+  color: ${props => props.theme.colors.column};
 
   &:hover {
     transition: 0.1s ease;

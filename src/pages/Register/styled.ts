@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RegisterDiv = styled.form`
-  min-height: 425px;
+  min-height: 440px;
   background: #ffffff;
   border: 2px solid #f5f5f5;
   box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.25);
@@ -17,13 +17,13 @@ export const RegisterDiv = styled.form`
   }
 
   @media (min-width: 768px) {
-    min-height: 431px;
+    min-height: 460px;
     width: 350px;
   }
 
   @media (min-width: 1024px) {
     width: 420px;
-    min-height: 439px;
+    min-height: 460px;
   }
 `;
 

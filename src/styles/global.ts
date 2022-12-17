@@ -2,14 +2,17 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   
+  * {
+  margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+  }
 
   body {
-    margin: 0;
-    padding: 0;
-    background: #FBFBFB;
-
+    background: ${props => props.theme.colors.background};
+    transition: 0.5s ease;
     font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
+   
 
     ::-webkit-scrollbar {
     width: 5px;
@@ -20,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #27ae60;
+    background-color: ${props => props.theme.colors.primary};
     border-radius: 20px;
     border: 3px solid transparent;
   }

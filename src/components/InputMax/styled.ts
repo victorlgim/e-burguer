@@ -19,11 +19,11 @@ export const InputHeaderMax = styled.input`
     background: #ffffff;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
-    height: 40px;
+    height: 42px;
     width: 100%;
     outline: none;
     padding-left: 10px;
-    
+
     ::placeholder {
       color: #e0e0e0;
     }
@@ -37,19 +37,19 @@ export const InputHeaderMax = styled.input`
 export const ButtonInputMax = styled.button`
   @media (min-width: 725px) {
     width: 45px;
-    height: 35px;
-    background: #27ae60;
-    border: 2px solid #27ae60;
+    height: 33px;
+    background: ${props => props.theme.colors.primary};
+    border: 2px solid ${props => props.theme.colors.primary};
     border-radius: 8px;
     position: absolute;
     z-index: 1;
     right: 0;
     left: -10;
-    margin-top: 6px;
+    margin-top: 4px;
     color: #fff;
     font-weight: 600;
     font-size: 14px;
-    margin-right: 9px;
+    margin-right: 5px;
   }
 
   @media (min-width: 1000px) {

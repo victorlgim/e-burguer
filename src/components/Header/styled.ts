@@ -12,11 +12,16 @@ export const DivContainer = styled.div`
   }
 `;
 
+export const MdLight = styled.img`
+
+`
+
 export const DivHeader = styled.header`
   height: 80px;
-  background: #f5f5f5;
+  background: ${props => props.theme.colors.background};
   display: flex;
   align-items: center;
+  box-shadow: 0px 0px 30px ${props => props.theme.colors.three};
 `;
 
 export const DivIcons = styled.div`
@@ -75,7 +80,7 @@ export const SpanCountCar = styled.span`
   margin-top: -34px;
   margin-right: 34px;
   right: 0;
-  background: #27ae60;
+  background: ${props => props.theme.colors.primary};
   border-radius: 7px;
   font-family: "Inter";
   font-style: normal;

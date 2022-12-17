@@ -23,8 +23,13 @@ export const ButtonRegister = styled.button`
 export const DivTopRegister = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 25px;
   justify-content: space-between;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 35px;
+  }
 `;
 
 export const ButtonBack = styled(Link)`
