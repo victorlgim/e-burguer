@@ -53,12 +53,9 @@ export const ButtonInputMax = styled.button`
   }
 
   @media (min-width: 1000px) {
-   
-  
   }
 
   @media (min-width: 1200px) {
-  
   }
 `;
 

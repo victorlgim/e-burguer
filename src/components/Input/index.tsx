@@ -6,12 +6,7 @@ const Input = () => {
     
   const { setMobile, changeResMobile, setResMobile } = useContext<any>(CartContext)
 
-   
-
-  const setResponsive: () => void = () => {
-    setMobile(false)
-    setResMobile('')
-  }
+  const setResponsive: () => void = () => { setMobile(false); setResMobile('')}
 
   return (
     

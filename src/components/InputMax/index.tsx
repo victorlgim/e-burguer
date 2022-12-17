@@ -5,7 +5,7 @@ import { CartContext } from '../../context/CartContext'
 
 const InputMax = () => {
  
-  const { changeResMobile  } = useContext<any>(CartContext)
+  const { changeResMobile } = useContext<any>(CartContext)
 
   return (
     <DivInputHeaderMax>

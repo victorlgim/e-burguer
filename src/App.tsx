@@ -1,4 +1,4 @@
-import { GlobalContext, GlobalProvider } from "./context/GlobalContext";
+import { GlobalProvider } from "./context/GlobalContext";
 import { UserProvider } from "./context/UserContext";
 import { CartProvider } from "./context/CartContext";
 import GlobalStyle from "./styles/global";
@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from 'styled-components'
  import 'react-toastify/dist/ReactToastify.css';
 import light from "./styles/themes/light";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import dark from "./styles/themes/dark";
 
 
@@ -16,7 +16,9 @@ function App() {
   const toggleTheme: () => void = () => setTheme(theme.title === 'light' ? dark : light)
  
   return (
+
     <ThemeProvider theme={ theme }>
+      
     <GlobalProvider>
        
       <UserProvider>

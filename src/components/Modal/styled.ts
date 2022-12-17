@@ -26,7 +26,6 @@ export const ModalMenu = styled.div`
   border-radius: 5px 5px 5px 5px;
   min-height: 260px;
   z-index: 1000;
- 
 
   @media (min-width: 375px) {
     width: 330px;
@@ -233,7 +232,7 @@ export const TrashCart = styled.img`
 
 export const DivBottomCart = styled.div`
   border-top: 2px solid #e0e0e0;
- margin-top: 10px;
+  margin-top: 10px;
 `;
 
 export const TopDivBottomCart = styled.div`
@@ -242,7 +241,6 @@ export const TopDivBottomCart = styled.div`
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
-
 `;
 
 export const MsgTotalCartBottom = styled.h5`

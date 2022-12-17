@@ -7,9 +7,9 @@ export const Logotype = styled.img`
 
   @media (min-width: 768px) {
     margin-top: -40px;
-  margin-bottom: 10px;
-  width: 160px;
-  height: 25px;
+    margin-bottom: 10px;
+    width: 160px;
+    height: 25px;
   }
 `;
 
@@ -50,14 +50,13 @@ export const ParagraphLogo = styled.p`
   font-weight: 400;
   font-size: 12px;
   color: #828282;
- 
 `;
 
 export const DivLogoTop = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const StrongLogo = styled.strong`
   color: #333333;
-`
+`;

@@ -23,7 +23,7 @@ const FormRegister = () => {
 
   const onSubmitFunction: SubmitHandler<iRegisterFormData> = async data => {
     try {
-
+      
       setLoading(true);
       const response = await api.post("users", data);
       verify();

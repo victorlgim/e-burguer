@@ -4,15 +4,12 @@ export const ContainerMain = styled.div`
   margin: 0 auto;
   animation: translateShow 0.4s ease;
 
-
   @media (min-width: 1000px) {
     width: 950px;
-
   }
 
   @media (min-width: 1200px) {
     width: 1150px;
-   
   }
 
   @keyframes translateShow {

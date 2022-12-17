@@ -133,11 +133,11 @@ export const BtnRegister = styled(Link)`
 `;
 
 export const MsgError = styled.span`
-  color: #FF577F;
+  color: #ff577f;
   font-size: 11px;
   display: block;
   margin: 0 auto;
   margin-left: 0px;
   margin-top: -6px;
   margin-bottom: 10px;
-`
+`;

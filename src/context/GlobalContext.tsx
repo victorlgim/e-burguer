@@ -9,10 +9,6 @@ export const GlobalContext = createContext({})
 export const GlobalProvider = ({ children }: iDefaultGlobalContext) => {
      
     const [loading, setLoading] = useState(false)
-   
-
- 
-  
      
    return (
      <GlobalContext.Provider value={{ loading, setLoading }}>

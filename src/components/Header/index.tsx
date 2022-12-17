@@ -12,6 +12,7 @@ const Header = ({ changeTheme, theme }: any) => {
   return (
 
     <DivHeader>
+
       <DivContainer>
         {
         
@@ -20,24 +21,34 @@ const Header = ({ changeTheme, theme }: any) => {
          (
           <>
             <ImgHeader src="./logo.png" />
+
             <DivIcons>
+
               {
                 theme.title === 'light' ? 
                 <MdNight onClick={changeTheme}/> 
                 : 
                 <MdLight src='./light.png' onClick={changeTheme}/>
-              }       
+              }     
+
               <ImgSearch onClick={ () => setMobile(true) } src="./search.png" />
+
               <InputMax />
+
               <DivImgCar>
-              <ImgCar onClick={ () => setModal(true) } src="./car.png" />
-              <SpanCountCar onClick={ () => setModal(true) }>{cart.length}</SpanCountCar>
+
+                <ImgCar onClick={ () => setModal(true) } src="./car.png" />
+                <SpanCountCar onClick={ () => setModal(true) }>{cart.length}</SpanCountCar>
+  
               </DivImgCar>
+
               <ImgExit onClick={exitAccount}  src="./exit.png" />
+
             </DivIcons>
           </>
         )}
       </DivContainer>
+      
     </DivHeader>
 
   );

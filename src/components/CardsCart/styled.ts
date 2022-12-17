@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const LiCart = styled.li`
- 
-`;
+export const LiCart = styled.li``;
 
 export const DivHeaderCartLi = styled.div`
   display: flex;

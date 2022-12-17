@@ -11,7 +11,6 @@ const Cards = ({ id, name, category, price, img }: MyObjectType) => {
    
   const { cart, setCart, list } = useContext(CartContext) as DefaultContextCard
    
-
   const selectItems = (event: React.MouseEvent<HTMLButtonElement>) => {
     
     const button = event.target as HTMLButtonElement;
@@ -19,7 +18,9 @@ const Cards = ({ id, name, category, price, img }: MyObjectType) => {
     const data = list.find((element: MyObjectType) => element.id * 1 === Number(button.id) * 1);
 
     if (data) {
+      
       const verify = cart.filter((lunch: MyObjectType) => data.id * 1 === lunch.id * 1);
+
       if (verify.length < 1) {
         setCart([...cart, data]);
         AddItemToast()
@@ -27,11 +28,6 @@ const Cards = ({ id, name, category, price, img }: MyObjectType) => {
         ErrorItemToast();
       }
     }
-
-    
-
-
-    
   
   }
 

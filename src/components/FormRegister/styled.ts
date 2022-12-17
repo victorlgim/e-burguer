@@ -71,10 +71,8 @@ export const MessageError = styled.span`
   margin-bottom: 7px;
 
   @media (min-width: 375px) {
-   
   }
 
   @media (min-width: 1000px) {
-    
   }
 `;

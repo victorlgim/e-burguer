@@ -4,20 +4,18 @@ export const DivInputHeader = styled.div`
   height: 50px;
   width: 100%;
   position: relative;
-
-
 `;
 
 export const InputHeader = styled.input`
   background: #ffffff;
-  border: 2px solid #E0E0E0;
+  border: 2px solid #e0e0e0;
   border-radius: 8px;
   height: 50px;
   width: 95%;
   outline: none;
   padding-left: 10px;
   ::placeholder {
-    color: #E0E0E0;
+    color: #e0e0e0;
   }
 
   @media (min-width: 375px) {
@@ -27,8 +25,6 @@ export const InputHeader = styled.input`
   @media (min-width: 425px) {
     width: 98%;
   }
-
-  
 `;
 
 export const ButtonInput = styled.button`
@@ -40,7 +36,7 @@ export const ButtonInput = styled.button`
   border-radius: 8px;
   position: absolute;
   margin-top: 5px;
-  right: 15px;;
+  right: 15px;
   margin-right: 3px;
   color: #fff;
   font-weight: 600;
@@ -51,7 +47,6 @@ export const ButtonInput = styled.button`
     margin-top: 8px;
     margin-right: 14px;
   }
-  
 `;
 
 export const ImgInput = styled.img`

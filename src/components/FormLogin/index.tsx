@@ -20,10 +20,11 @@ const FormLogin = () => {
 
   const onSubmitLogin: SubmitHandler<iLoginFormData> = async data => {
     try {
+
       setLoading(true);
+
       const response = await api.post("login", data);
 
-       console.log(response)
         setLogin(true)
         sucessLogin()
         window.localStorage.setItem("token", JSON.stringify(response.data.accessToken));

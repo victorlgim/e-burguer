@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import CardsCart from "../CardsCart";
 import { ContainerCart, BtnCloseModal, ContainerTopHeaderModal, MsgEmpty, CartEmpty, DivTopHeaderModal, DivTopModal, ModalContainer, ModalMenu, TitleHeaderModal, UlCart } from "./styled";
@@ -10,8 +10,6 @@ import Total from "../Total";
 const Modal = () => {
 
   const { cart, setModal } = useContext(CartContext) as DefaultContextCard
-
-  
 
   return (
     <ModalContainer>
@@ -37,8 +35,8 @@ const Modal = () => {
                 <>
                 <UlCart>
                   
-                  {
-                  cart.map((lunch: MyObjectType) => (
+              {
+                cart.map((lunch: MyObjectType) => (
                 <CardsCart key={lunch.id} id={lunch.id} name={lunch.name} category={lunch.category} price={lunch.price} img={lunch.img} />
               )
               )
