@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import { PaymentsContext } from "../../context/PaymentsContext";
+import { CartContext } from "../../context/CartContext";
 import CardsCart from "../CardsCart";
 import { ContainerCart, BtnCloseModal, ContainerTopHeaderModal, MsgEmpty, CartEmpty, DivTopHeaderModal, DivTopModal, ModalContainer, ModalMenu, TitleHeaderModal, UlCart } from "./styled";
-import { DefaultContextCard } from "../../@types/@PaymentsTypes/types";
-import { MyObjectType } from '../../@types/@GlobalTypes/types';
+import { DefaultContextCard } from "../../@types/PaymentsTypes/types";
+import { MyObjectType } from '../../@types/GlobalTypes/types';
 import Total from "../Total";
 
 
 const Modal = () => {
 
-  const { cart, setModal } = useContext(PaymentsContext) as DefaultContextCard
+  const { cart, setModal } = useContext(CartContext) as DefaultContextCard
 
   
 

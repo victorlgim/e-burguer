@@ -1,10 +1,12 @@
 import React from 'react'
-import { MyObjectType } from '../@GlobalTypes/types';
+import { MyObjectType } from '../GlobalTypes/types';
+import { iDefaultTheme } from '../GlobalTypes/types';
 
 export interface iDefaultPaymentsContext {
-    children: React.ReactNode;
-    changeTheme: () => void;
-}  
+  children: React.ReactNode;
+  changeTheme: () => void;
+  setTheme: any;
+}
 
 export interface iDefaultListContext {
     id: number;

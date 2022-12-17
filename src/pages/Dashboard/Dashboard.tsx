@@ -6,20 +6,20 @@ import { useContext } from "react";
 import { ContainerMain, UlCards } from "./styled";
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
-import { PaymentsContext } from "../../context/PaymentsContext";
+import { CartContext } from "../../context/CartContext";
 import { notAuth } from "../../utils/toast";
-import { DefaultValueList } from "../../@types/@PaymentsTypes/types";
+import { DefaultValueList } from "../../@types/PaymentsTypes/types";
 
 
-const Homepage = ({ changeTheme, theme }: any) => {
+const Homepage = ({ changeTheme, theme, setTheme }: any) => {
 
   const navigate = useNavigate()
 
   const token = localStorage.getItem('token') as string;
 
-  const { resMobile, empty, modal } = useContext<any>(PaymentsContext)
+  const { resMobile, empty, modal } = useContext<any>(CartContext)
 
-  const { list, setList } = useContext(PaymentsContext) as DefaultValueList
+  const { list, setList } = useContext(CartContext) as DefaultValueList
 
   const filterState = list.filter(e => e.category.toLowerCase().includes(resMobile.toLowerCase().trim()) || e.name.toLowerCase().includes(resMobile.toLowerCase().trim()))
 
@@ -48,7 +48,7 @@ const Homepage = ({ changeTheme, theme }: any) => {
     
     {modal && <Modal />}
     
-      <Header changeTheme={ changeTheme } theme={ theme }/>
+      <Header changeTheme={ changeTheme } theme={ theme } setTheme={ setTheme }/>
       <ContainerMain>
         <UlCards>
 

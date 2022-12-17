@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
-import { PaymentsContext } from '../../context/PaymentsContext';
+import { CartContext } from '../../context/CartContext';
 import { BtnAddBurguer, CardBurguers, CategoryBurguer, ImgBurguer, PriceBurguer, TitleBurguer } from './styled'
-import { MyObjectType } from '../../@types/@GlobalTypes/types';
-import { DefaultContextCard } from '../../@types/@PaymentsTypes/types';
+import { MyObjectType } from '../../@types/GlobalTypes/types';
+import { DefaultContextCard } from '../../@types/PaymentsTypes/types';
 import { AddItemToast, ErrorItemToast } from '../../utils/toast';
 
 
 
 const Cards = ({ id, name, category, price, img }: MyObjectType) => {
    
-  const { cart, setCart, list } = useContext(PaymentsContext) as DefaultContextCard
+  const { cart, setCart, list } = useContext(CartContext) as DefaultContextCard
    
 
   const selectItems = (event: React.MouseEvent<HTMLButtonElement>) => {

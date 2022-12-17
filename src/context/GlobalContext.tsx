@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { iDefaultGlobalContext } from "../@types/@GlobalTypes/types";
+import { iDefaultGlobalContext } from "../@types/GlobalTypes/types";
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
 

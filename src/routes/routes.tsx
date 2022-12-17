@@ -6,7 +6,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 
 
-const RoutesMain = ({ changeTheme, theme }: any) => {
+const RoutesMain = ({ changeTheme, theme, setTheme }: any) => {
     return (
       <Routes>
         <Route element={<AuthLogin />}>
@@ -16,7 +16,7 @@ const RoutesMain = ({ changeTheme, theme }: any) => {
           <Route path="*" element={<Login/>} />
         </Route>
         <Route element={<AuthRoutes />}>
-          <Route path="/dashboard" element={<Dashboard changeTheme={ changeTheme } theme={ theme }/>} />
+          <Route path="/dashboard" element={<Dashboard changeTheme={ changeTheme } theme={ theme } setTheme={ setTheme }/>} />
         </Route>
       </Routes>
     );

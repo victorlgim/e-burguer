@@ -1,10 +1,10 @@
 import { ButtonInput, DivInputHeader, InputHeader } from './styled'
 import { useContext } from 'react'
-import { PaymentsContext } from '../../context/PaymentsContext'
+import { CartContext } from '../../context/CartContext'
 
 const Input = () => {
     
-  const { setMobile, changeResMobile, setResMobile } = useContext<any>(PaymentsContext)
+  const { setMobile, changeResMobile, setResMobile } = useContext<any>(CartContext)
 
    
 

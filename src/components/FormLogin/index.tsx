@@ -1,6 +1,6 @@
 import { formSchemaLogin } from '../../utils/schema';
 import { BtnRegister, ButtonLogin, ContainerForm, InputForm, LabelForm, LoginDiv, MsgError, SpanCreate, TitleForm } from './styled'
-import { iLoginFormData } from '../../@types/@UserTypes/types';
+import { iLoginFormData } from '../../@types/UserTypes/types';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { api } from '../../services/api';
@@ -9,12 +9,13 @@ import { GlobalContext } from '../../context/GlobalContext';
 import { useContext, useState } from 'react';
 import { Loading } from '../FormRegister/styled';
 import { sucessLogin } from '../../utils/toast';
+import { GlobalContextType } from '../../@types/GlobalTypes/types';
 
 const FormLogin = () => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<iLoginFormData>({ resolver: yupResolver(formSchemaLogin) });
-  const { loading, setLoading } = useContext<any>(GlobalContext)
-  const [ login, setLogin ] = useState<boolean>(true);
+  const { loading, setLoading } = useContext(GlobalContext) as GlobalContextType
+  const [ login, setLogin ] = useState<boolean>(true)
   const navigate = useNavigate();
 
   const onSubmitLogin: SubmitHandler<iLoginFormData> = async data => {

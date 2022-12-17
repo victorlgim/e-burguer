@@ -1,15 +1,13 @@
 import { useContext } from "react";
-import { PaymentsContext } from "../../context/PaymentsContext";
-import { DefaultContextAdded } from "../../@types/@PaymentsTypes/types";
+import { CartContext } from "../../context/CartContext";
+import { DefaultContextAdded } from "../../@types/PaymentsTypes/types";
 import Input from "../Input";
 import InputMax from "../InputMax";
-import { DivContainer, DivHeader, DivIcons, ImgCar, ImgExit, ImgHeader, ImgSearch, DivImgCar, SpanCountCar, MdLight } from "./styled";
-import {  MdDarkMode } from 'react-icons/md'
-
+import { DivContainer, MdNight, DivHeader, DivIcons, ImgCar, ImgExit, ImgHeader, ImgSearch, DivImgCar, SpanCountCar, MdLight } from "./styled";
 
 const Header = ({ changeTheme, theme }: any) => {
   
-  const { exitAccount, mobile, setMobile, cart, setModal } = useContext(PaymentsContext) as DefaultContextAdded
+  const { exitAccount, mobile, setMobile, cart, setModal } = useContext(CartContext) as DefaultContextAdded
  
   return (
 
@@ -25,7 +23,7 @@ const Header = ({ changeTheme, theme }: any) => {
             <DivIcons>
               {
                 theme.title === 'light' ? 
-                <MdDarkMode onClick={changeTheme}/> 
+                <MdNight onClick={changeTheme}/> 
                 : 
                 <MdLight src='./light.png' onClick={changeTheme}/>
               }       

@@ -1,6 +1,6 @@
 import { GlobalContext, GlobalProvider } from "./context/GlobalContext";
 import { UserProvider } from "./context/UserContext";
-import { PaymentsProvider } from "./context/PaymentsContext";
+import { CartProvider } from "./context/CartContext";
 import GlobalStyle from "./styles/global";
 import RoutesMain from "./routes/routes";
 import { ToastContainer } from "react-toastify";
@@ -13,7 +13,6 @@ import dark from "./styles/themes/dark";
 
 function App() {
   const [theme, setTheme] = useState(light) 
-  console.log(theme)
   const toggleTheme: () => void = () => setTheme(theme.title === 'light' ? dark : light)
  
   return (
@@ -21,12 +20,12 @@ function App() {
     <GlobalProvider>
        
       <UserProvider>
-        <PaymentsProvider changeTheme={ toggleTheme }>
+        <CartProvider changeTheme={ toggleTheme } setTheme={ setTheme }>
           <GlobalStyle />
           <ToastContainer position="top-right" autoClose={1000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="colored" />
-          <RoutesMain changeTheme={ toggleTheme } theme={ theme }/>
+          <RoutesMain changeTheme={ toggleTheme } theme={ theme } setTheme={ setTheme }/>
           
-        </PaymentsProvider>
+        </CartProvider>
       </UserProvider>
       
     </GlobalProvider>

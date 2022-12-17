@@ -1,16 +1,17 @@
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { iDefaultPaymentsContext, iDefaultListContext } from "../@types/@PaymentsTypes/types";
+import { iDefaultPaymentsContext, iDefaultListContext } from "../@types/PaymentsTypes/types";
 import { GlobalContext } from "./GlobalContext";
 import { useContext, useState } from "react";
-import { GlobalContextType } from "../@types/@GlobalTypes/types";
-import { MyObjectType } from "../@types/@GlobalTypes/types";
+import { GlobalContextType } from "../@types/GlobalTypes/types";
+import { MyObjectType } from "../@types/GlobalTypes/types";
 import { sucessLogout } from "../utils/toast";
+import light from "../styles/themes/light";
 
-export const PaymentsContext = createContext({});
+export const CartContext = createContext({});
 
 
-export const PaymentsProvider = ({ children, changeTheme }: iDefaultPaymentsContext) => {
+export const CartProvider = ({ children, setTheme }: iDefaultPaymentsContext) => {
 
    const navigate = useNavigate()
    const { setLoading } = useContext(GlobalContext) as GlobalContextType
@@ -30,15 +31,15 @@ export const PaymentsProvider = ({ children, changeTheme }: iDefaultPaymentsCont
    const exitAccount = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
-      changeTheme()
+      setTheme(light)
       navigate("/"); 
       setLoading(false);
       sucessLogout()
   };
       
    return (
-     <PaymentsContext.Provider value={{ exitAccount, modal, setCounter, counter, setModal, list, setList, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile, cart, setCart }}>
+     <CartContext.Provider value={{ exitAccount, modal, setCounter, counter, setModal, list, setList, mobile, setMobile, resMobile, setResMobile, empty, changeResMobile, cart, setCart }}>
         { children }
-     </PaymentsContext.Provider>
+     </CartContext.Provider>
    )
 }

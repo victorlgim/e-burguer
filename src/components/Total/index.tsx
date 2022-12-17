@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import { PaymentsContext } from '../../context/PaymentsContext'
+import { CartContext } from '../../context/CartContext'
 import { DivBottomCart, TopDivBottomCart, MsgTotalCartBottom, SpanTotal, ButtonRemoveAll } from '../Modal/styled'
-import { DefaultContextCard } from '../../@types/@PaymentsTypes/types'
-import { Item } from '../../@types/@PaymentsTypes/types'
+import { DefaultContextCard } from '../../@types/PaymentsTypes/types'
+import { Item } from '../../@types/PaymentsTypes/types'
 
 const Total = () => {
 
-    const { cart, setCart } = useContext(PaymentsContext) as DefaultContextCard
+    const { cart, setCart } = useContext(CartContext) as DefaultContextCard
 
   return (
     

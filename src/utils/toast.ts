@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 export const verify = () => {
   toast.success("Cadastro efetuado com sucesso!", {
     position: "top-right",
-    autoClose: 1000,
+    autoClose: 500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -16,7 +16,7 @@ export const verify = () => {
 export const sucessLogin = () => {
   toast.success("Login realizado com sucesso!", {
     position: "top-right",
-    autoClose: 1000,
+    autoClose: 500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -29,7 +29,7 @@ export const sucessLogin = () => {
 export const sucessLogout = () => {
   toast.success("Logout realizado com sucesso!", {
     position: "top-right",
-    autoClose: 1000,
+    autoClose: 500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -42,7 +42,7 @@ export const sucessLogout = () => {
 export const AddItemToast = () => {
   toast.success("Item adicionado com sucesso!", {
     position: "top-right",
-    autoClose: 500,
+    autoClose: 250,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -52,10 +52,12 @@ export const AddItemToast = () => {
   });
 };
 
+
+
 export const notify = () => {
   toast.error("Email já existente!", {
     position: "top-right",
-    autoClose: 1500,
+    autoClose: 500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -81,7 +83,7 @@ export const ErrorItemToast = () => {
 export const notAuth = () => {
   toast.error("Ops! Algo deu errado :(", {
     position: "top-right",
-    autoClose: 1500,
+    autoClose: 500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,

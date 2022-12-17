@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MdDarkMode } from "react-icons/md";
 
 export const DivContainer = styled.div`
   min-width: 290px;
@@ -12,9 +13,25 @@ export const DivContainer = styled.div`
   }
 `;
 
-export const MdLight = styled.img`
+export const MdNight = styled(MdDarkMode)`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 
-`
+  &:hover {
+    filter: brightness(0.9);
+  }
+`;
+
+export const MdLight = styled.img`
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+`;
 
 export const DivHeader = styled.header`
   height: 80px;
@@ -28,7 +45,6 @@ export const DivIcons = styled.div`
   display: flex;
   gap: 13px;
   position: relative;
-  
 
   @media (min-width: 375px) {
     gap: 17px;
@@ -57,7 +73,7 @@ export const ImgSearch = styled.img`
   width: 25px;
   height: 22px;
   display: block;
-  
+
   cursor: pointer;
   @media (min-width: 768px) {
     display: none;
@@ -65,7 +81,6 @@ export const ImgSearch = styled.img`
 `;
 
 export const DivImgCar = styled.div`
-  
   width: 30px;
   @media (min-width: 1000px) {
     margin-top: 2px;
@@ -95,7 +110,6 @@ export const SpanCountCar = styled.span`
   @media (min-width: 768px) {
     margin-right: 49px;
   }
-
 `;
 
 export const ImgCar = styled.img`

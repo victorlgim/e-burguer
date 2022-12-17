@@ -5,36 +5,44 @@ import { ContainerForm, InputForm, LabelForm } from "../FormLogin/styled";
 import { ButtonBack, ButtonRegister, DivTopRegister, Loading, MessageError, TitleFormRegister } from "./styled";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { iRegisterFormData } from "../../@types/@UserTypes/types";
-import { api } from "../../services/api";
-import { notify, verify } from "../../utils/toast";
+import { iRegisterFormData } from "../../@types/UserTypes/types";
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
+import { GlobalContextType } from "../../@types/GlobalTypes/types";
+import { notify, verify } from "../../utils/toast";
+import { api } from "../../services/api";
 
 
 const FormRegister = () => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<iRegisterFormData>({ resolver: yupResolver(formSchema) });
-  const { loading, setLoading } = useContext<any>(GlobalContext)
+  const { loading, setLoading } = useContext(GlobalContext) as GlobalContextType
   const navigate = useNavigate()
 
   const onSubmitFunction: SubmitHandler<iRegisterFormData> = async data => {
     try {
-      setLoading(true)
+
+      setLoading(true);
       const response = await api.post("users", data);
-      verify()
-      navigate('/')
-      console.log(response)
-    } catch (err) {    
-      notify()
-    } finally {
-      reset({email: "", password: "", passwordConfirmed: ""})
-      setLoading(false)
+      verify();
+      navigate("/");     
+      console.log(response);
+    } 
+    
+    catch (err) {
+      notify();
+    } 
+    
+    finally {
+      reset({ email: "", password: "", passwordConfirmed: "" });
+      setLoading(false);
     }
   };
 
   return (
+
     <RegisterDiv onSubmit={handleSubmit(onSubmitFunction)}>
       <ContainerForm>
 
@@ -63,6 +71,7 @@ const FormRegister = () => {
         
       </ContainerForm>
     </RegisterDiv>
+
   );
 };
 
