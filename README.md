@@ -14,5 +14,3 @@ Tecnologias utilizadas:
 Deploy da aplicação: https://trdriver-victorglim.vercel.app/
 
 https://user-images.githubusercontent.com/109770689/209516426-fc915cc7-1362-4bb4-b36b-676292d835f3.mp4
-
-
